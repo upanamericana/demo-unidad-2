@@ -1,0 +1,96 @@
+/* =========================================================
+   Preset · Posgrados Panamericana (Universidad Panamericana)
+   ---------------------------------------------------------
+   Hex del logo entregado (docs/Logotipos, verde #0F5C51) y del
+   Manual de marca UP 2020 (docs/Manual de imagen…, pp. 32-33,
+   62, 126-127: Pantone 329 CP, 465 CP / 10403 C). Derivados
+   calculados, no estimados: ver ../INSTITUCION.md §1.1.
+   Guía completa: ../INSTITUCION.md
+
+   Nota de arquitectura (la misma de Scala y Andina): este archivo
+   se carga ANTES de core.css, así que los tokens que core.css
+   también define se declaran con `html:root` (especificidad
+   0,1,1 > 0,1,0) para ganarle sin tocar el motor compartido.
+   ========================================================= */
+
+/* --- Los 3 tokens que el motor lee vía var() --- */
+:root {
+  --c-acento: #0F5C51;   /* Verde Posgrados (el del logo) · acción: botones, enlaces, estado activo */
+  --c-info:   #3F7D74;   /* Tahalí claro (verde + 20 % blanco overlay, manual p. 127) · informativo, segundo tono */
+  --c-deep:   #0A4039;   /* Verde hondo (verde + 30 % negro multiply, p. 127) · sidebar, portada, bandas */
+}
+
+html:root {
+
+  /* --- Marca ---
+     El verde actúa; el dorado destaca (solo gráfico); la tinta dorada es el
+     dorado cuando tiene que ser texto pequeño (ver INSTITUCION.md §1.1). */
+  --c-verde:         #0F5C51;
+  --c-verde-hover:   #0D4E45;   /* verde + 15 % negro: hover de los controles */
+  --c-verde-75:      #4B857C;   /* verde al 75 % sobre blanco: el Tahalí atenuado (p. 127) */
+  --c-dorado:        #B9975B;   /* Pantone 465 CP (p. 62) · solo gráfico: 2,75:1 sobre blanco */
+  --c-dorado-tinta:  #7A5C2B;   /* dorado como texto sobre claro: 6,19:1 sobre blanco */
+  --c-dorado-claro:  #D9C9A3;   /* dorado como texto sobre verde: 4,81:1 */
+  --c-dorado-palido: #F1EAD9;   /* superficie dorada muy clara para fichas y datos */
+  --c-crema:         #F7F4EE;   /* la hoja: fondo de trabajo cálido (territorio visual, pp. 22-26) */
+  --c-lino:          #EFEBE2;   /* superficie apagada */
+
+  --grad-up: linear-gradient(118deg, #072E29 0%, #0A4039 46%, #0F5C51 100%);
+
+  /* --- Tipografía ---
+     Laurentian Std (primaria, cabezas y destacados; manual p. 30) y Seravek
+     (secundaria, cuerpo; p. 31). Las dos son comerciales con licencia de
+     escritorio: se declaran primero en el stack para quien las tenga instaladas
+     (Seravek viene con macOS e iOS) y detrás va el sustituto libre que viaja por
+     Google Fonts (fuentes.html): Crimson Pro y Source Sans 3, elegidos por
+     espécimen (docs/analisis-manual-2026-10-07). Licencia web: pendiente del
+     cliente (INSTITUCION.md §6). */
+  --font-display: 'Laurentian Std', 'Crimson Pro', Georgia, 'Times New Roman', serif;
+  --font-serif:   var(--font-display);
+  --font-body:    'Seravek', 'Source Sans 3', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono:    var(--font-body);   /* los eyebrows son Seravek en mayúsculas con tracking */
+
+  /* --- Estados ---
+     El warning del motor (#FFB020) contra el dorado da 1,5:1: se confundirían.
+     El success del motor es verde como la marca: se corre a un verde amarillento
+     para que «correcto» no se lea como «marca». */
+  --warning: #C2620E;
+  --danger:  #B3303C;
+  --success: #2F7A3E;
+
+  /* --- Forma ---
+     El sistema gráfico del manual es ortogonal y diagonal (Franco Cuartel y
+     Tahalí, pp. 208-212): sin curvas. Radios mínimos y botones rectangulares. */
+  --r-sm: 2px;  --r-md: 4px;  --r-lg: 6px;  --r-xl: 8px;  --r-pill: 4px;
+}
+
+/* --- Superficies cálidas ---
+   Solo en las versiones claras (híbrida y clara): la oscura conserva las
+   superficies del motor. Con `html:root` a secas se pisarían las tres. */
+html:root:not([data-version="oscura"]) {
+  --bg-app:     #F7F4EE;
+  --bg-surface: #FFFFFF;
+  --bg-card:    #FFFFFF;
+  --bg-muted:   #EFEBE2;
+  --border-c:   #E3DDD0;
+  --text-head:  #10302B;
+  --text-pri:   #2A2F2D;
+  --text-mut:   #5F6663;
+
+  /* --- Sombras tintadas en verde hondo, nunca negro puro --- */
+  --shadow-sm: 0 1px 2px rgba(10, 64, 57, 0.06), 0 6px 18px rgba(10, 64, 57, 0.07);
+  --shadow-md: 0 2px 4px rgba(10, 64, 57, 0.07), 0 14px 34px rgba(10, 64, 57, 0.11);
+  --shadow-lg: 0 24px 60px rgba(7, 46, 41, 0.20);
+}
+
+/* --- Tema oscuro ---
+   Las superficies de marca (lino, crema, dorado pálido) son claras: en la
+   versión oscura se vuelven verde hondo aclarado, y la tinta dorada pasa al
+   dorado claro, que es el que se lee sobre oscuro. `html:root[...]` gana a
+   `html:root` (0,2,1 > 0,1,1). */
+html:root[data-version="oscura"] {
+  --c-lino:          color-mix(in oklab, #0A4039 80%, white);
+  --c-crema:         color-mix(in oklab, #0A4039 88%, white);
+  --c-dorado-palido: color-mix(in oklab, #0A4039 74%, #B9975B);
+  --c-dorado-tinta:  #D9C9A3;
+}

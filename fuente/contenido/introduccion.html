@@ -1,0 +1,214 @@
+      <header class="ova-screen__head" data-reveal>
+        <!-- Eyebrow: el número de la unidad. Título: el encabezado literal del DI, «Introducción»,
+             sin título editorial (decisión del 2026-10-10, la de Scala; INSTITUCION §2). -->
+        <div class="ova-screen__eyebrow">Unidad 2</div>
+        <h1 class="ova-screen__title">Introducción</h1>
+        <p class="ova-screen__lead">
+          Obtener respuestas de una IA y explorar alternativas es apenas la mitad del
+          trabajo de decidir. La otra mitad —la que desarrolla esta unidad— ocurre sobre
+          un terreno más resbaladizo: comprobar si esas respuestas son confiables y
+          lograr que la decisión resultante sea aceptada por quien tiene que aprobarla.
+        </p>
+      </header>
+
+      <!-- Apertura ilustrada · la otra mitad: la respuesta ya obtenida cruza la
+           comprobación y llega a quien tiene que aprobarla (guion en insumos/ILUSTRACIONES.md) -->
+      <figure class="up-ilustracion" data-reveal>
+        <img src="assets/img/curso/ilustracion-otra-mitad.svg"
+             alt="A la izquierda, la respuesta que la IA ya entregó, con una cifra destacada; al centro, esa misma cifra cotejada contra un registro que no es la IA y confirmada; a la derecha, la persona que tiene que aprobarla recibe la recomendación con el sello de respaldo." />
+      </figure>
+
+      <p data-reveal>
+        El motivo es simple: explorar bien no garantiza decidir bien. Una alternativa que
+        parece sólida puede apoyarse en una cifra que la IA inventó sin que nadie lo note,
+        y la recomendación mejor razonada no cambia nada si la persona que debe aprobarla
+        no la entiende o no confía en ella. Los dos temas de esta unidad atacan justo esos
+        dos riesgos: primero aprenderás a auditar lo que la IA te devuelve; después, a
+        comunicar tu recomendación de modo que alguien pueda usarla.
+      </p>
+
+      <!-- Idea clave · apertura de la unidad (sin etiqueta: el texto manda) -->
+      <div class="up-apertura" data-reveal>
+        <p>
+          Auditar no es desconfiar de todo lo que la IA produce; es verificar antes de
+          actuar. <span class="up-destacado">La desconfianza total paraliza; la auditoría
+          sistemática protege.</span>
+        </p>
+      </div>
+
+      <!-- ════ Sección de la introducción ════ -->
+      <section class="up-seccion" id="que-vas-a-lograr" data-reveal>
+        <h2 class="up-seccion__titulo">Qué vas a lograr <span class="up-suave">en esta</span> <span class="up-destacado">unidad</span></h2>
+        <!-- Objetivo · literal -->
+        <p class="up-seccion__lead">Juzgar la confiabilidad de un resultado obtenido con IA y comunicar una
+          decisión de la que alguien deberá responder, auditando de forma proporcional al
+          riesgo y declarando la incertidumbre en la recomendación.</p>
+      </section>
+
+      <!-- Público objetivo -->
+      <div class="ova-callout" data-reveal>
+        <div class="ova-callout__ico"><iconify-icon icon="mdi:account-group-outline"></iconify-icon></div>
+        <div>
+          <span class="ova-callout__tag">Público objetivo</span>
+          <p style="margin:8px 0 0;">
+            El mismo público de la Unidad 1: profesionales de cualquier disciplina que
+            deban tomar decisiones apoyadas en datos y en herramientas de IA generativa,
+            sin que se requiera formación técnica previa en análisis de datos.
+          </p>
+        </div>
+      </div>
+
+      <h3 style="margin:48px 0 20px;" data-reveal>¿Qué vas a aprender?</h3>
+
+      <div class="ova-infografia" data-reveal>
+        <div class="ova-infografia__paso">
+          <div class="ova-infografia__num">01</div>
+          <div class="ova-infografia__icono"><iconify-icon icon="mdi:magnify-scan"></iconify-icon></div>
+          <div>
+            <p class="ova-infografia__desc" style="margin-top:0;">
+              Auditar críticamente los resultados que entrega una IA, reconociendo la
+              <span class="up-termino" tabindex="0" data-def="Fenómeno por el cual una IA presenta información con apariencia de certeza —cifras, nombres o referencias— que no es correcta. No es un error de cálculo: su función es producir texto plausible, no comprobar hechos.">alucinación</span>
+              y el <span class="up-termino" tabindex="0" data-def="Tendencia a confiar más en una recomendación por el solo hecho de venir de un sistema automatizado, bajando la guardia más de lo que se haría frente a un colega.">sesgo de automatización</span>,
+              y aplicando la técnica de las tres fuentes de forma proporcional al riesgo
+              de la decisión.
+            </p>
+          </div>
+        </div>
+        <div class="ova-infografia__paso" style="--tinte:var(--c-info);">
+          <div class="ova-infografia__num">02</div>
+          <div class="ova-infografia__icono"><iconify-icon icon="mdi:account-voice"></iconify-icon></div>
+          <div>
+            <p class="ova-infografia__desc" style="margin-top:0;">
+              Construir y comunicar una recomendación en el lenguaje de quien decide, con
+              el criterio explícito, la incertidumbre declarada y un siguiente paso
+              concreto.
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ════ Sección de la introducción ════ -->
+      <section class="up-seccion" id="ciclo-decision" data-reveal>
+        <h2 class="up-seccion__titulo">El ciclo de la decisión: <span class="up-suave">el</span> <span class="up-destacado">hilo conductor</span></h2>
+        <p class="up-seccion__lead">Conviene tener a la vista el mapa completo. Toda decisión apoyada en datos e
+          IA puede ordenarse en un ciclo de cuatro pasos que guía el pensamiento cuando
+          la información no ofrece una respuesta obvia. No es una fórmula rígida, sino
+          una forma de proceder.</p>
+      </section>
+
+      <!-- El ciclo: la escalera de Francos Cuarteles de marca hace de imagen; los 4 pasos, visibles
+           a la vez (el DI trae un carrusel). Los peldaños 1 y 2 quedan atenuados porque
+           se recorrieron en la U1; el 3 y el 4 —los de esta unidad— encendidos. -->
+      <div class="up-ciclo" data-reveal>
+
+        <svg class="up-ciclo__escalera" viewBox="0 0 420 420" role="img"
+             aria-label="Ciclo de cuatro pasos dibujado como una escalera de Francos Cuarteles: formular el criterio, explorar con IA, auditar el resultado, justificar y comunicar. Los pasos 3 y 4 son los de esta unidad.">
+          <g class="up-peldano"><rect x="36" y="318" width="74" height="74" fill="#CFE0DC"/><polygon points="82,392 94,392 110,366 110,346" fill="#E4EEEB"/><text x="66" y="364" text-anchor="middle" font-size="22" font-weight="700" fill="#5F7F79">01</text></g>
+          <g class="up-peldano"><rect x="118" y="318" width="74" height="74" fill="#CFE0DC" opacity=".38"/><rect x="118" y="236" width="74" height="74" fill="#CFE0DC"/><polygon points="164,310 176,310 192,284 192,264" fill="#E4EEEB"/><text x="148" y="282" text-anchor="middle" font-size="22" font-weight="700" fill="#5F7F79">02</text></g>
+          <g class="up-peldano"><rect x="200" y="318" width="74" height="74" fill="#0F5C51" opacity=".38"/><rect x="200" y="236" width="74" height="74" fill="#0F5C51" opacity=".38"/><rect x="200" y="154" width="74" height="74" fill="#0F5C51"/><polygon points="246,228 258,228 274,202 274,182" fill="#3F7D74"/><text x="230" y="200" text-anchor="middle" font-size="22" font-weight="700" fill="#FFFFFF">03</text></g>
+          <g class="up-peldano"><rect x="282" y="318" width="74" height="74" fill="#B9975B" opacity=".38"/><rect x="282" y="236" width="74" height="74" fill="#B9975B" opacity=".38"/><rect x="282" y="154" width="74" height="74" fill="#B9975B" opacity=".38"/><rect x="282" y="72" width="74" height="74" fill="#B9975B"/><polygon points="328,146 340,146 356,120 356,100" fill="#D9C9A3"/><text x="312" y="118" text-anchor="middle" font-size="22" font-weight="700" fill="#0A4039">04</text></g>
+          <polygon points="300,14 312,14 334,52 322,52" fill="#B9975B"/>
+          <text x="36" y="72" font-size="22" font-weight="700" fill="#10302B">Pasos 3 y 4</text>
+          <text x="36" y="98" font-size="15" font-weight="400" fill="#10302B" opacity=".75">en esta unidad</text>
+        </svg>
+
+        <div class="up-ciclo__pasos">
+          <div class="up-paso" style="--tinte:#CFE0DC;">
+            <div class="up-paso__num" style="color:#7FA39C;">PASO 01</div>
+            <h3 class="up-paso__titulo"><iconify-icon icon="mdi:target" style="color:#7FA39C;"></iconify-icon>Formular el criterio</h3>
+            <p class="up-paso__desc">Decidir qué significaría "una buena decisión" antes de mirar los datos.</p>
+          </div>
+          <div class="up-paso" style="--tinte:#CFE0DC;">
+            <div class="up-paso__num" style="color:#7FA39C;">PASO 02</div>
+            <h3 class="up-paso__titulo"><iconify-icon icon="mdi:robot-outline" style="color:#7FA39C;"></iconify-icon>Explorar con IA</h3>
+            <p class="up-paso__desc">Usar la IA para generar y comparar alternativas, no para que decida por uno.</p>
+          </div>
+          <div class="up-paso" style="--tinte:#0F5C51;">
+            <div class="up-paso__num">PASO 03</div>
+            <h3 class="up-paso__titulo"><iconify-icon icon="mdi:magnify-scan"></iconify-icon>Auditar el resultado</h3>
+            <p class="up-paso__desc">Contrastar lo que arrojó la IA contra al menos una fuente o supuesto verificable.</p>
+          </div>
+          <div class="up-paso" style="--tinte:#B9975B;">
+            <div class="up-paso__num" style="color:#7A5C2B;">PASO 04</div>
+            <h3 class="up-paso__titulo"><iconify-icon icon="mdi:account-voice" style="color:#7A5C2B;"></iconify-icon>Justificar y comunicar</h3>
+            <p class="up-paso__desc">Presentar la recomendación de forma que alguien que decide pueda confiar en ella.</p>
+          </div>
+        </div>
+
+      </div>
+
+
+      <!-- ════ Sección de la introducción ════ -->
+      <section class="up-seccion" id="pasos-3-y-4" data-reveal>
+        <h2 class="up-seccion__titulo">Los pasos 3 y 4 <span class="up-suave">en</span> <span class="up-destacado">acción</span></h2>
+        <p class="up-seccion__lead">Esta unidad desarrolla los pasos 3 y 4: auditar el resultado y comunicar la
+          recomendación. Para verlos en acción, tomamos un caso.</p>
+      </section>
+
+      <!-- Situación -->
+      <div class="ova-callout" data-reveal>
+        <div class="ova-callout__ico"><iconify-icon icon="mdi:map-marker-question-outline"></iconify-icon></div>
+        <div>
+          <span class="ova-callout__tag">Situación</span>
+          <p style="margin:8px 0 0;">
+            Un equipo de mercadeo debe decidir si renueva o cancela una campaña digital de
+            seis semanas cuyo desempeño parece mixto. Ya le pidió a una IA que analizara
+            los datos, y esta señaló que dos de las seis semanas coincidieron con un
+            feriado. El equipo debe decidir si confiar en esa explicación.
+          </p>
+        </div>
+      </div>
+
+      <!-- El caso de un vistazo · misma ilustración que en la U1: es el mismo caso -->
+      <figure class="up-ilustracion" data-reveal>
+        <img src="assets/img/curso/ilustracion-campana.svg"
+             alt="Gráfico de barras del costo por cliente durante seis semanas: está por encima del promedio histórico, y las semanas 3 y 4 coinciden con un feriado." />
+      </figure>
+
+      <!-- Acordeón del DI · los dos pasos, como recorrido (mismo patrón que la U1) -->
+      <div class="up-escenas" data-reveal>
+
+        <div class="up-escena">
+          <div class="up-escena__marca">
+            <span class="up-escena__num">03</span>
+            <span class="up-escena__icono"><iconify-icon icon="mdi:magnify-scan"></iconify-icon></span>
+          </div>
+          <div>
+            <h3 class="up-escena__titulo">Paso 3 — Auditar el resultado</h3>
+            <p class="up-escena__texto">
+              El equipo no la acepta de inmediato. Aplica la
+              <span class="up-termino" tabindex="0" data-def="Método para instalar el hábito de auditar: antes de aceptar una afirmación relevante de la IA, se busca confirmarla con al menos una de tres fuentes independientes —dato interno, experiencia directa o fuente externa verificable—. Si ninguna la confirma, se trata como hipótesis, no como hecho.">técnica de las tres fuentes</span>:
+              revisa el calendario interno de campañas anteriores y confirma que, en
+              efecto, campañas pasadas cayeron de forma parecida en semanas de feriado.
+              La afirmación de la IA queda <strong>verificada, no solo aceptada</strong>.
+            </p>
+          </div>
+        </div>
+
+        <div class="up-escena">
+          <div class="up-escena__marca">
+            <span class="up-escena__num">04</span>
+            <span class="up-escena__icono"><iconify-icon icon="mdi:account-voice"></iconify-icon></span>
+          </div>
+          <div>
+            <h3 class="up-escena__titulo">Paso 4 — Comunicar la recomendación</h3>
+            <p class="up-escena__texto">
+              Con eso, el equipo la presenta a su gerente en una sola idea clara: el costo
+              por cliente está por encima del promedio, pero dos de las seis semanas
+              coinciden con un feriado que históricamente afecta ese indicador; por eso se
+              recomienda extender la campaña dos semanas más antes de decidir, en lugar de
+              cancelarla ahora. La recomendación <strong>declara la incertidumbre en vez de
+              esconderla</strong> y propone un siguiente paso concreto.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <blockquote class="up-quote" data-reveal>
+        Visto así, auditar y comunicar no son pasos técnicos ni formales: son los que
+        convierten un análisis en una decisión que alguien puede respaldar.
+        <span class="up-destacado">Este mismo recorrido es el que trabajarás en los dos
+        temas de esta unidad.</span>
+      </blockquote>

@@ -1,0 +1,352 @@
+      <header class="ova-screen__head" data-reveal>
+        <div class="ova-screen__eyebrow">Tema {{NUM}}</div>
+        <h1 class="ova-screen__title">Construir y comunicar <span class="up-suave">la</span> <span class="up-destacado">recomendación</span></h1>
+        <!-- Lead · "Propósito del tema", literal de la tabla del DI -->
+        <p class="ova-screen__lead">
+          Sostener una idea frente a alguien que tiene el poder de aceptarla o rechazarla,
+          conectando el trabajo analítico previo con la habilidad de comunicarlo con
+          claridad.
+        </p>
+      </header>
+
+      <!-- Tabla · Resultado / criterio del tema -->
+      <div class="ova-callout" data-reveal>
+        <div class="ova-callout__ico"><iconify-icon icon="mdi:flag-outline"></iconify-icon></div>
+        <div>
+          <span class="ova-callout__tag">Resultado / criterio</span>
+          <p style="margin:8px 0 0;">
+            Construye y comunica una recomendación en el lenguaje de quien decide,
+            declarando el criterio, la incertidumbre y el siguiente paso.
+          </p>
+        </div>
+      </div>
+
+      <!-- Apertura ilustrada · la tesis del tema, antes de la banda que la enuncia: una
+           recomendación correcta pero ilegible y una equivocada acaban en la misma caja
+           (guion en insumos/ILUSTRACIONES.md) -->
+      <figure class="up-ilustracion" data-reveal>
+        <img src="assets/img/curso/ilustracion-mismo-efecto.svg"
+             alt="Dos recomendaciones en hoja: una con sello de correcta pero con el texto ilegible, otra bien escrita pero con sello de equivocada. Las flechas de las dos se juntan y caen en la misma caja de archivo, rotulada no se usa." />
+      </figure>
+
+      <!-- Respiro · la frase que abre el tema, a primer plano; el párrafo se queda con el resto -->
+      <div class="up-respiro" data-reveal>
+        <p>
+          Una recomendación técnicamente correcta que no logra comunicarse con claridad
+          tiene, en la práctica, el mismo efecto que una equivocada: <strong>no se usa</strong>.
+        </p>
+      </div>
+
+      <p data-reveal>
+        Este tema conecta el trabajo analítico de los temas anteriores con una habilidad
+        que suele subestimarse: <strong>sostener una idea frente a alguien que tiene el poder
+        de aceptarla o rechazarla</strong>.
+      </p>
+
+      <!-- ════ Sección {{NUM}}.1 ════ -->
+      <section class="up-seccion" id="tres-elementos" data-reveal>
+        <h2 class="up-seccion__titulo">Tres elementos <span class="up-suave">que hacen que una recomendación</span> <span class="up-destacado">se sostenga</span></h2>
+        <p class="up-seccion__lead">Frente a quien tiene que aprobarla:</p>
+      </section>
+
+      <!-- Acordeón del DI · los tres elementos; los títulos van en negrilla en el Word -->
+      <div class="ova-acordeon" data-reveal>
+        <div class="ova-acordeon__item is-open">
+          <button class="ova-acordeon__head">
+            <span><span class="num">01</span> <strong>El criterio explícito, no implícito</strong></span>
+            <iconify-icon class="ova-acordeon__chev" icon="mdi:chevron-down"></iconify-icon>
+          </button>
+          <div class="ova-acordeon__body"><div class="ova-acordeon__body-inner">
+            Quien te escucha necesita saber contra qué estás evaluando. Un criterio
+            implícito es un criterio que quien decide no puede usar.
+          </div></div>
+        </div>
+        <div class="ova-acordeon__item">
+          <button class="ova-acordeon__head">
+            <span><span class="num">02</span> <strong>La incertidumbre declarada, en vez de esconderse</strong></span>
+            <iconify-icon class="ova-acordeon__chev" icon="mdi:chevron-down"></iconify-icon>
+          </button>
+          <div class="ova-acordeon__body"><div class="ova-acordeon__body-inner">
+            Decir “esto funciona mejor si X se mantiene estable” es más honesto y, en
+            contra de la intuición, más persuasivo que aparentar una certeza que no se
+            tiene.
+          </div></div>
+        </div>
+        <div class="ova-acordeon__item">
+          <button class="ova-acordeon__head">
+            <span><span class="num">03</span> <strong>El lenguaje de quien decide</strong></span>
+            <iconify-icon class="ova-acordeon__chev" icon="mdi:chevron-down"></iconify-icon>
+          </button>
+          <div class="ova-acordeon__body"><div class="ova-acordeon__body-inner">
+            Que la recomendación se exprese en el lenguaje de quien decide y no en el del
+            análisis: hablar de impacto y de siguiente paso, no de metodología.
+          </div></div>
+        </div>
+      </div>
+
+      <p style="margin-top:40px;" data-reveal>El contraste se ve en un ejemplo:</p>
+
+      <!-- Comparativo del DI · la misma recomendación en dos idiomas, como caso a dos vías:
+           ilustración + frase literal + pie literal, en una sola pieza -->
+      <div class="up-caso" data-reveal>
+
+        <div class="up-caso__via up-caso__via--error">
+          <span class="up-caso__tag">✕ Lenguaje del análisis</span>
+          <svg class="up-caso__ilustracion" viewBox="0 0 420 200" role="img"
+               aria-label="La recomendación llega como cifra de modelo, 63 % de mejora en retención, y quien decide se queda con una pregunta.">
+            <rect width="420" height="200" rx="14" fill="#F7F4EE"/>
+            <path d="M34 40 h170 a12 12 0 0 1 12 12 v70 a12 12 0 0 1 -12 12 h-146 l-18 16 v-16 h-6 a12 12 0 0 1 -12 -12 v-70 a12 12 0 0 1 12 -12 z" fill="#CFE0DC"/>
+            <text x="58" y="82" font-size="30" font-weight="600" fill="#FFFFFF">63 %</text>
+            <text x="58" y="106" font-size="13" fill="#FFFFFF" opacity=".9">mejora en retención</text>
+            <g fill="#FFFFFF" opacity=".7">
+              <rect x="58" y="118" width="120" height="6" rx="3"/>
+            </g>
+            <circle cx="322" cy="96" r="30" fill="#EFEBE2"/>
+            <circle cx="322" cy="86" r="10" fill="none" stroke="#3F7D74" stroke-width="2.6"/>
+            <path d="M304 118 a18 12 0 0 1 36 0" fill="none" stroke="#3F7D74" stroke-width="2.6" stroke-linecap="round"/>
+            <text x="368" y="80" text-anchor="middle" font-size="48" font-weight="600" fill="#C1444F" opacity=".55">?</text>
+            <text x="322" y="160" text-anchor="middle" font-size="15" fill="#5F6663">quien decide</text>
+          </svg>
+          <p class="up-caso__texto">
+            “El modelo predictivo sugiere una probabilidad de 63 % de mejora en retención”.
+          </p>
+          <div class="up-caso__ruta">
+            <span class="up-caso__paso up-caso__paso--tarde">Metodología</span>
+          </div>
+        </div>
+
+        <div class="up-caso__via up-caso__via--ok">
+          <span class="up-caso__tag">✓ Lenguaje de quien decide</span>
+          <svg class="up-caso__ilustracion" viewBox="0 0 420 200" role="img"
+               aria-label="La misma recomendación llega como impacto y riesgo, y quien decide la entiende sin explicación adicional.">
+            <rect width="420" height="200" rx="14" fill="#F7F4EE"/>
+            <path d="M34 40 h170 a12 12 0 0 1 12 12 v70 a12 12 0 0 1 -12 12 h-146 l-18 16 v-16 h-6 a12 12 0 0 1 -12 -12 v-70 a12 12 0 0 1 12 -12 z" fill="#F1EAD9"/>
+            <text x="58" y="74" font-size="15" font-weight="600" fill="#7A5C2B">Es más probable que funcione</text>
+            <text x="58" y="96" font-size="15" font-weight="600" fill="#7A5C2B">que que no funcione</text>
+            <text x="58" y="120" font-size="14" fill="#7A5C2B" opacity=".85">y el riesgo si no funciona es bajo</text>
+            <circle cx="322" cy="96" r="30" fill="#EFEBE2"/>
+            <circle cx="322" cy="86" r="10" fill="none" stroke="#0F5C51" stroke-width="2.6"/>
+            <path d="M304 118 a18 12 0 0 1 36 0" fill="none" stroke="#0F5C51" stroke-width="2.6" stroke-linecap="round"/>
+            <circle cx="368" cy="66" r="18" fill="#E6F4EC"/>
+            <path d="M359 66 l6 7 13 -14" fill="none" stroke="#1F7A4C" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="322" y="160" text-anchor="middle" font-size="15" fill="#5F6663">quien decide</text>
+          </svg>
+          <p class="up-caso__texto">
+            “Con los datos que tenemos, es más probable que esto funcione que que no
+            funcione, y el riesgo si no funciona es bajo”.
+          </p>
+          <div class="up-caso__ruta">
+            <span class="up-caso__paso up-caso__paso--clave">Impacto</span>
+            <span class="up-caso__flecha">→</span>
+            <span class="up-caso__paso">Siguiente paso</span>
+          </div>
+        </div>
+
+        <p class="up-caso__pie">
+          Las dos frases dicen lo mismo, pero la segunda está en el idioma de quien tiene
+          que decidir, <strong>no en el de quien tiene que auditar el modelo</strong>.
+        </p>
+      </div>
+
+      <!-- Idea clave -->
+      <div class="ova-callout" style="margin-top:32px;" data-reveal>
+        <div class="ova-callout__ico"><iconify-icon icon="mdi:lightbulb-on-outline"></iconify-icon></div>
+        <div>
+          <span class="ova-callout__tag">Idea clave</span>
+          <p style="margin:8px 0 0;">
+            Declarar la incertidumbre, lejos de debilitar el mensaje, coincide con lo que
+            muestra la investigación sobre comunicación de la incertidumbre: hacerlo de
+            forma explícita y honesta tiende a preservar la confianza de la audiencia en
+            lugar de erosionarla (Spiegelhalter, 2017; van der Bles et al., 2019). Además,
+            el reto de esta unidad pide llevar el criterio y el hábito de auditoría a un
+            contexto distinto; esa capacidad de aplicar lo aprendido en una situación
+            nueva es lo que la teoría del aprendizaje denomina
+            <span class="up-termino" tabindex="0" data-def="Capacidad de aplicar en una situación nueva lo aprendido en otra. No ocurre de forma automática: se favorece cuando se reconoce explícitamente qué se mantiene y qué cambia entre un contexto y otro.">transferencia</span>,
+            y no ocurre de forma automática: <strong>se favorece cuando el aprendiz reconoce
+            de manera explícita qué se mantiene y qué cambia entre un contexto y otro</strong>
+            (Perkins y Salomon, 1992).
+          </p>
+        </div>
+      </div>
+
+      <!-- Dato curioso · lectura lateral, sin caja -->
+      <div class="up-dato" data-reveal>
+        <span class="up-dato__tag">Dato curioso</span>
+        <p>
+          La intuición dice que admitir incertidumbre debilita un mensaje, pero la
+          investigación sobre comunicación de la incertidumbre muestra lo contrario:
+          expresarla de forma explícita y honesta tiende a <strong>preservar la confianza de
+          la audiencia en lugar de erosionarla</strong>.
+        </p>
+        <p class="up-fuente">
+          Fuente: van der Bles, A. M., van der Linden, S., Freeman, A. L. J., Mitchell,
+          J., Galvão, A. B., Zaval, L. y Spiegelhalter, D. J. (2019). <em>Communicating
+          uncertainty about facts, numbers and science</em>. Royal Society Open Science,
+          6(5), 181870.
+        </p>
+      </div>
+
+      <!-- Dato curioso en cifras · la cifra y su explicación en un solo bloque -->
+      <div class="up-cifras" data-reveal>
+        <div class="up-cifras__datos">
+          <div class="up-cifra">
+            <span class="up-cifra__valor">10.519</span>
+            <span class="up-cifra__label">participantes en un estudio internacional</span>
+          </div>
+        </div>
+        <div class="up-cifras__texto">
+          <span class="up-cifras__tag">Dato curioso en cifras</span>
+          <p>
+            Un estudio internacional con 10.519 participantes encontró que expresar la
+            incertidumbre estadística mediante un rango numérico podía reducir ligeramente
+            la confianza en la cifra, pero no reducía la confianza en la fuente. La
+            evidencia respalda <strong>comunicar la incertidumbre de forma cuantificada</strong>,
+            en lugar de ocultarla o expresarla con frases vagas.
+          </p>
+          <p class="up-fuente">
+            Fuente: Kerr, J., van der Bles, A.-M., Dryhurst, S., Schneider, C. R.,
+            Chopurian, V., Freeman, A. L. J. y van der Linden, S. (2023). <em>The effects of
+            communicating uncertainty around statistics, on public trust</em>. Royal Society
+            Open Science, 10(11), 230604.
+          </p>
+        </div>
+      </div>
+
+      <!-- Comparativo -->
+      <!-- Comparativo error/ok: el DI nombra un error y su criterio; el color lo pone la variante -->
+      <div class="ova-vs up-vs--error-ok" data-reveal>
+        <div class="ova-vs__card">
+          <span class="ova-vs__card-tag">Error frecuente</span>
+          <p style="margin-top:14px;">
+            Presentar la recomendación con el vocabulario del análisis, de modo que quien
+            decide entiende el método pero no el impacto ni el siguiente paso.
+          </p>
+        </div>
+        <div class="ova-vs__divider">VS</div>
+        <div class="ova-vs__card ova-vs__card--alt">
+          <span class="ova-vs__card-tag">Criterio de aceptación</span>
+          <p style="margin-top:14px;">
+            La recomendación debe poder leerse en voz alta a quien aprueba y quedar clara
+            sin explicación adicional, declarando qué se propone, con qué grado de certeza
+            y qué hacer a continuación.
+          </p>
+        </div>
+      </div>
+
+      <figure class="up-foto-ancha" data-reveal>
+        <div class="up-pendiente" role="img" aria-label="Fotografía pendiente: Varias personas señalan las cifras de un tablero impreso sobre la mesa de trabajo, con luz natural (pauta del manual, pp. 22-23).">
+          <div class="up-pendiente__marco"><iconify-icon icon="mdi:image-outline"></iconify-icon></div>
+          <span class="up-pendiente__tag">Fotografía pendiente · banco de imágenes de Posgrados Panamericana</span>
+          <p class="up-pendiente__desc">Varias personas señalan las cifras de un tablero impreso sobre la mesa de trabajo, con luz natural (pauta del manual, pp. 22-23).</p>
+        </div>
+        <figcaption>
+          La recomendación se sostiene o se cae frente a quien tiene que aprobarla.
+        </figcaption>
+      </figure>
+
+      <!-- La ficha de la recomendación · lo que el DI enumera, vuelto objeto (misma familia que las fichas de la U1 y la de auditoría del tema 3) -->
+      <div class="up-anatomia" data-reveal>
+        <figure style="margin:0;">
+          <svg viewBox="0 0 460 452" role="img"
+               aria-label="Ficha de la recomendación con cuatro campos: qué se propone, con qué evidencia se sostiene, qué incertidumbre permanece y qué acción permitiría reducirla o gestionar el riesgo.">
+            <defs>
+              <clipPath id="clipFichaRecomendacion">
+                <rect x="14" y="18" width="432" height="416" rx="20"/>
+              </clipPath>
+            </defs>
+            <g clip-path="url(#clipFichaRecomendacion)">
+              <rect x="14" y="18" width="432" height="416" fill="#FFFFFF"/>
+              <rect x="14" y="18" width="432" height="12" fill="#B9975B"/>
+            </g>
+            <rect x="14" y="18" width="432" height="416" rx="20" fill="none" stroke="#E3DDD0" stroke-width="2"/>
+
+            <text x="44" y="72" font-size="14" font-weight="600" letter-spacing="2" fill="#0F5C51">RECOMENDACIÓN</text>
+            <text x="44" y="97" font-size="15" fill="#5F6663">Lo que indica, en el lenguaje de quien decide</text>
+            <line x1="44" y1="124" x2="416" y2="124" stroke="#E3DDD0" stroke-width="2"/>
+
+            <circle cx="64" cy="164" r="18" fill="#EFEBE2"/>
+            <path d="M57 164 l5 5 9 -10" fill="none" stroke="#0F5C51" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="98" y="159" font-size="17" font-weight="600" fill="#0A4039">Qué se propone</text>
+            <rect x="98" y="172" width="286" height="9" rx="4.5" fill="#E3DDD0"/>
+
+            <circle cx="64" cy="240" r="18" fill="#EFEBE2"/>
+            <path d="M57 233 h14 v14 h-14 z M60 240 h8" fill="none" stroke="#5F6663" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+            <text x="98" y="235" font-size="17" font-weight="600" fill="#0A4039">Con qué evidencia se sostiene</text>
+            <rect x="98" y="248" width="240" height="9" rx="4.5" fill="#E3DDD0"/>
+
+            <circle cx="64" cy="316" r="18" fill="#F1EAD9"/>
+            <text x="64" y="322" text-anchor="middle" font-size="17" font-weight="600" fill="#7A5C2B">?</text>
+            <text x="98" y="311" font-size="17" font-weight="600" fill="#0A4039">Qué incertidumbre permanece</text>
+            <rect x="98" y="324" width="300" height="9" rx="4.5" fill="#E3DDD0"/>
+
+            <circle cx="64" cy="392" r="18" fill="#EFEBE2"/>
+            <path d="M56 392 h16 M66 386 l6 6 -6 6" fill="none" stroke="#0F5C51" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="98" y="383" font-size="16" font-weight="600" fill="#0A4039">Qué acción permitiría reducirla</text>
+            <text x="98" y="404" font-size="16" font-weight="600" fill="#0A4039">o gestionar el riesgo</text>
+          </svg>
+        </figure>
+
+        <div>
+          <div class="up-nota">
+            <span class="up-nota__tag">Clave de aplicación</span>
+            <p>
+              Cuando exista incertidumbre cuantificable, exprésela con un rango, una
+              condición o un escenario y vincúlela con el siguiente paso. Decir solamente
+              «no estamos seguros» <strong>informa menos y puede debilitar la confianza</strong>.
+            </p>
+          </div>
+          <div class="up-nota">
+            <span class="up-nota__tag">Criterio de aceptación</span>
+            <p>
+              La recomendación indica qué se propone, con qué evidencia se sostiene, qué
+              incertidumbre permanece y qué acción permitiría reducirla o gestionar el
+              riesgo.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Respiro · la transferencia, a primer plano -->
+      <div class="up-respiro" data-reveal>
+        <p>
+          Llevar el criterio y el hábito de auditoría a un contexto distinto del que se
+          aprendió es lo que la teoría del aprendizaje denomina transferencia,
+          <strong>y no ocurre de forma automática</strong>.
+        </p>
+      </div>
+
+      <!-- Comparativo · Aplique / No aplique (tercer comparativo de la pantalla: sin caja) -->
+      <div class="up-vs-ligero" data-reveal>
+        <div class="up-vs-ligero__col up-vs-ligero__col--si">
+          <span class="up-vs-ligero__signo">✓</span>
+          <span class="up-vs-ligero__tag">Aplique</span>
+          <p>
+            Nombrar explícitamente qué se mantiene y qué cambia al pasar de un caso a otro,
+            <span class="up-aclaracion">
+              al llevar el criterio y el hábito de auditoría a un contexto distinto del que
+              se aprendió (transferencia, que no ocurre de forma automática).
+            </span>
+          </p>
+        </div>
+        <div class="up-vs-ligero__col up-vs-ligero__col--no">
+          <span class="up-vs-ligero__signo">✕</span>
+          <span class="up-vs-ligero__tag">No aplique</span>
+          <p>
+            Suponer que quien resolvió bien el caso de la campaña sabrá resolver por sí solo
+            uno de logística o de talento humano.
+          </p>
+        </div>
+      </div>
+
+      <!-- Para reflexionar -->
+      <div class="ova-callout ova-callout--reflexion" style="margin-top:44px;" data-reveal>
+        <div class="ova-callout__ico"><iconify-icon icon="mdi:comment-question-outline"></iconify-icon></div>
+        <div>
+          <span class="ova-callout__tag">Para reflexionar</span>
+          <p style="margin:8px 0 0;">
+            Piensa en la última recomendación que presentaste en tu trabajo. ¿La persona
+            que te escuchó entendió el nivel de certeza real que tenías, o quedó con la
+            impresión de que estabas más seguro de lo que en verdad estabas?
+          </p>
+        </div>
+      </div>

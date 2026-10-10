@@ -1,0 +1,336 @@
+      <header class="ova-screen__head" data-reveal>
+        <div class="ova-screen__eyebrow">Evaluación</div>
+        <h1 class="ova-screen__title">Pon a prueba <span class="up-suave">lo que trabajaste en</span> <span class="up-destacado">la unidad</span></h1>
+      </header>
+
+      <!-- Preguntas, opciones y retroalimentación: literales de insumos/Banco_preguntas_Unidad 2.docx.
+           El banco trae la respuesta correcta siempre en A; aquí su posición varía por pregunta
+           (las letras las pone el componente). La columna "Respuesta" del apareamiento es clave
+           del docente y no se muestra. -->
+      <div class="ova-evalquiz" data-ova-evalquiz data-label-item="Pregunta" data-label-items="preguntas" data-reveal>
+        <div class="ova-evalquiz__slide is-active" data-slide="intro">
+          <div class="up-eval__cuerpo">
+            <p class="up-eval__lead">Once preguntas sobre los dos temas de la unidad —cinco de análisis con
+              contexto, cinco conceptuales y un apareamiento de conceptos—:
+              <strong>auditar críticamente los resultados obtenidos</strong> y
+              <strong>construir y comunicar la recomendación</strong>.</p>
+
+            <div class="up-eval__datos">
+              <div class="up-eval__dato">
+                <span class="v">11</span>
+                <span class="l">preguntas, la última de apareamiento</span>
+              </div>
+              <div class="up-eval__dato">
+                <span class="v">2</span>
+                <span class="l">temas cubiertos</span>
+              </div>
+              <div class="up-eval__dato">
+                <span class="v"><iconify-icon icon="mdi:message-reply-text-outline"></iconify-icon></span>
+                <span class="l">retroalimentación en cada respuesta, aciertes o no</span>
+              </div>
+            </div>
+
+            <button class="ova-evalquiz__btn ova-evalquiz__btn--primary" data-evalquiz-go="1">
+              Comenzar <iconify-icon icon="mdi:arrow-right"></iconify-icon>
+            </button>
+            <p class="up-eval__ayuda">También puedes moverte con las flechas del teclado.</p>
+          </div>
+        </div>
+        <div class="ova-evalquiz__slide" data-slide="r1" data-section="Tema 1 — Auditar críticamente los resultados obtenidos" data-section-color="acento">
+          <div class="up-eval__cuerpo">
+            <div class="ova-quiz">
+              <span class="up-eval__tema">Tema 1 — Auditar críticamente los resultados obtenidos</span>
+              <p class="up-eval__contexto">Una analista le pide a una herramienta de IA un panorama del sector. La herramienta afirma que el 38 % de los clientes abandona durante el primer mes y cita un informe con autor, institución y año. La analista busca ese informe y comprueba que no existe.</p>
+              <h3 class="ova-quiz__question">¿Qué fenómeno explica lo ocurrido?</h3>
+              <div class="ova-quiz__opts">
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>A.</strong> Un sesgo de automatización: confianza aumentada por venir del sistema
+            </button>
+            <button class="ova-quiz__opt" data-correct="true">
+              <strong>B.</strong> Una alucinación: información incorrecta presentada con toda apariencia de certeza
+            </button>
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>C.</strong> Un sesgo de confirmación: evidencia buscada a favor del criterio
+            </button>
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>D.</strong> Una métrica de vanidad: cifra llamativa alejada de la decisión
+            </button>
+              </div>
+              <div class="ova-quiz__feedback"
+                   data-correct="No se trata de un error de cálculo, sino de la forma normal en que opera un modelo de lenguaje: su función es producir texto plausible, no comprobar hechos (Ji et al., 2023). Por eso el detalle —la cifra exacta, el autor, el año— refuerza la apariencia de certeza sin aportar ninguna garantía de veracidad. La defensa es siempre la misma: toda cifra que vaya a sostener una decisión debe poder verificarse contra una fuente ajena a la herramienta."
+                   data-wrong="No se trata de un error de cálculo, sino de la forma normal en que opera un modelo de lenguaje: su función es producir texto plausible, no comprobar hechos (Ji et al., 2023). Por eso el detalle —la cifra exacta, el autor, el año— refuerza la apariencia de certeza sin aportar ninguna garantía de veracidad. La defensa es siempre la misma: toda cifra que vaya a sostener una decisión debe poder verificarse contra una fuente ajena a la herramienta."></div>
+            </div>
+          </div>
+        </div>
+        <div class="ova-evalquiz__slide" data-slide="r2" data-section="Tema 1 — Auditar críticamente los resultados obtenidos" data-section-color="acento">
+          <div class="up-eval__cuerpo">
+            <div class="ova-quiz">
+              <span class="up-eval__tema">Tema 1 — Auditar críticamente los resultados obtenidos</span>
+              <p class="up-eval__contexto">Una herramienta de IA sostiene que la caída de ventas del último trimestre se explica por un cambio normativo reciente. El equipo debe decidir si esa explicación puede sostener su recomendación.</p>
+              <h3 class="ova-quiz__question">¿Qué acción aplica correctamente la técnica de las tres fuentes?</h3>
+              <div class="ova-quiz__opts">
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>A.</strong> Consultar de nuevo a la herramienta con un prompt distinto
+            </button>
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>B.</strong> Solicitar a la herramienta que amplíe su explicación con ejemplos
+            </button>
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>C.</strong> Incluir la explicación en el informe citando la herramienta usada
+            </button>
+            <button class="ova-quiz__opt" data-correct="true">
+              <strong>D.</strong> Contrastar el cambio con el texto oficial y ventas internas
+            </button>
+              </div>
+              <div class="ova-quiz__feedback"
+                   data-correct="La técnica exige contrastar la afirmación con al menos una de tres fuentes independientes de la IA: un dato interno, la experiencia directa de alguien que conoce el tema o una fuente externa verificable. Revisar el texto oficial de la norma y cruzarlo con las ventas propias combina dos de esas tres vías. Volver a consultar a la herramienta, en cambio, no verifica nada, porque no es una fuente ajena a ella misma."
+                   data-wrong="La técnica exige contrastar la afirmación con al menos una de tres fuentes independientes de la IA: un dato interno, la experiencia directa de alguien que conoce el tema o una fuente externa verificable. Revisar el texto oficial de la norma y cruzarlo con las ventas propias combina dos de esas tres vías. Volver a consultar a la herramienta, en cambio, no verifica nada, porque no es una fuente ajena a ella misma."></div>
+            </div>
+          </div>
+        </div>
+        <div class="ova-evalquiz__slide" data-slide="r3" data-section="Tema 1 — Auditar críticamente los resultados obtenidos" data-section-color="acento">
+          <div class="up-eval__cuerpo">
+            <div class="ova-quiz">
+              <span class="up-eval__tema">Tema 1 — Auditar críticamente los resultados obtenidos</span>
+              <p class="up-eval__contexto">Un coordinador debe resolver dos asuntos el mismo día: cambiar el orden de dos módulos de un curso interno, algo que puede revertirse en una semana, y firmar un contrato anual con un proveedor externo.</p>
+              <h3 class="ova-quiz__question">¿Cómo debería distribuir el esfuerzo de auditoría entre ambas decisiones?</h3>
+              <div class="ova-quiz__opts">
+            <button class="ova-quiz__opt" data-correct="true">
+              <strong>A.</strong> Verificar exhaustivamente el contrato y de forma ligera el curso
+            </button>
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>B.</strong> Verificar exhaustivamente el curso y de forma ligera el contrato
+            </button>
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>C.</strong> Verificar ambas decisiones aplicando exactamente el mismo nivel de detalle
+            </button>
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>D.</strong> Verificar la decisión que el equipo entregue con mayor rapidez
+            </button>
+              </div>
+              <div class="ova-quiz__feedback"
+                   data-correct="La auditoría es proporcional al riesgo. Un contrato anual es difícil de revertir y tiene consecuencias altas, de modo que justifica verificación exhaustiva; reordenar dos módulos es reversible y de bajo impacto, y aplicarle el mismo nivel de escrutinio cuesta más de lo que aporta. Calibrar ese esfuerzo según cuánto está en juego es, en sí mismo, parte de la competencia profesional."
+                   data-wrong="La auditoría es proporcional al riesgo. Un contrato anual es difícil de revertir y tiene consecuencias altas, de modo que justifica verificación exhaustiva; reordenar dos módulos es reversible y de bajo impacto, y aplicarle el mismo nivel de escrutinio cuesta más de lo que aporta. Calibrar ese esfuerzo según cuánto está en juego es, en sí mismo, parte de la competencia profesional."></div>
+            </div>
+          </div>
+        </div>
+        <div class="ova-evalquiz__slide" data-slide="r4" data-section="Tema 2 — Construir y comunicar la recomendación" data-section-color="info">
+          <div class="up-eval__cuerpo">
+            <div class="ova-quiz">
+              <span class="up-eval__tema">Tema 2 — Construir y comunicar la recomendación</span>
+              <p class="up-eval__contexto">Una analista presenta a su gerente el resultado de un análisis: «el modelo arroja una probabilidad de 63 % de mejora en retención, con un intervalo de confianza del 95 %». El gerente le pide que lo explique de otra manera.</p>
+              <h3 class="ova-quiz__question">¿Cuál reformulación está en el lenguaje de quien decide?</h3>
+              <div class="ova-quiz__opts">
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>A.</strong> El intervalo calculado se mantiene dentro del rango habitual esperado
+            </button>
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>B.</strong> La muestra analizada presenta una varianza menor que la anterior
+            </button>
+            <button class="ova-quiz__opt" data-correct="true">
+              <strong>C.</strong> Es más probable que funcione y el riesgo resulta bajo
+            </button>
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>D.</strong> El modelo predictivo alcanza un desempeño superior al periodo previo
+            </button>
+              </div>
+              <div class="ova-quiz__feedback"
+                   data-correct="Las dos frases pueden decir lo mismo, pero solo una está en el idioma de quien tiene que decidir; la otra está en el de quien tiene que auditar el modelo. Quien aprueba necesita saber qué se propone, con qué grado de certeza y qué hacer a continuación, no con qué método se llegó allí. Una recomendación técnicamente correcta que no se entiende tiene, en la práctica, el mismo efecto que una equivocada: no se usa."
+                   data-wrong="Las dos frases pueden decir lo mismo, pero solo una está en el idioma de quien tiene que decidir; la otra está en el de quien tiene que auditar el modelo. Quien aprueba necesita saber qué se propone, con qué grado de certeza y qué hacer a continuación, no con qué método se llegó allí. Una recomendación técnicamente correcta que no se entiende tiene, en la práctica, el mismo efecto que una equivocada: no se usa."></div>
+            </div>
+          </div>
+        </div>
+        <div class="ova-evalquiz__slide" data-slide="r5" data-section="Tema 2 — Construir y comunicar la recomendación" data-section-color="info">
+          <div class="up-eval__cuerpo">
+            <div class="ova-quiz">
+              <span class="up-eval__tema">Tema 2 — Construir y comunicar la recomendación</span>
+              <p class="up-eval__contexto">Un equipo verificó con su calendario interno que el feriado afectó dos de las seis semanas de la campaña, pero no logró confirmar un dato sobre el gasto publicitario de un competidor.</p>
+              <h3 class="ova-quiz__question">¿Cómo debería quedar redactada la recomendación al gerente?</h3>
+              <div class="ova-quiz__opts">
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>A.</strong> Recomendar extender dos semanas omitiendo el dato del principal competidor
+            </button>
+            <button class="ova-quiz__opt" data-correct="true">
+              <strong>B.</strong> Recomendar extender dos semanas y declarar el dato sin verificar
+            </button>
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>C.</strong> Recomendar cancelar de inmediato porque persiste una duda todavía pendiente
+            </button>
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>D.</strong> Recomendar presentar el dato del competidor como hecho ya comprobado
+            </button>
+              </div>
+              <div class="ova-quiz__feedback"
+                   data-correct="Una afirmación no verificada puede seguir siendo útil como hipótesis, siempre que se marque como tal y se vincule con un siguiente paso concreto. Declarar la incertidumbre no debilita el mensaje: el estudio de Kerr et al. (2023), con 10.519 participantes, mostró que expresarla de forma explícita puede reducir levemente la confianza en la cifra, pero no en la fuente. Esconderla, en cambio, deja a quien aprueba sin manera de calibrar cuánto peso darle."
+                   data-wrong="Una afirmación no verificada puede seguir siendo útil como hipótesis, siempre que se marque como tal y se vincule con un siguiente paso concreto. Declarar la incertidumbre no debilita el mensaje: el estudio de Kerr et al. (2023), con 10.519 participantes, mostró que expresarla de forma explícita puede reducir levemente la confianza en la cifra, pero no en la fuente. Esconderla, en cambio, deja a quien aprueba sin manera de calibrar cuánto peso darle."></div>
+            </div>
+          </div>
+        </div>
+        <div class="ova-evalquiz__slide" data-slide="r6" data-section="Tema 1 — Auditar críticamente los resultados obtenidos" data-section-color="acento">
+          <div class="up-eval__cuerpo">
+            <div class="ova-quiz">
+              <span class="up-eval__tema">Tema 1 — Auditar críticamente los resultados obtenidos</span>
+              <h3 class="ova-quiz__question">¿Qué significa auditar un resultado obtenido con IA?</h3>
+              <div class="ova-quiz__opts">
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>A.</strong> Repetir por completo el análisis entregado por la herramienta generativa
+            </button>
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>B.</strong> Desconfiar por norma de todo resultado producido por la herramienta
+            </button>
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>C.</strong> Aceptar el resultado cuando incluye cifras, nombres y referencias precisas
+            </button>
+            <button class="ova-quiz__opt" data-correct="true">
+              <strong>D.</strong> Verificar antes de actuar las afirmaciones que sostienen la decisión
+            </button>
+              </div>
+              <div class="ova-quiz__feedback"
+                   data-correct="Auditar no es desconfiar de todo ni repetir el análisis entero. Es concentrar la verificación en las afirmaciones que cambian la decisión o cuyo error tendría mayor impacto. La distinción es sutil pero decisiva: la desconfianza total paraliza el trabajo, mientras que la auditoría sistemática lo protege sin anular la utilidad de la herramienta."
+                   data-wrong="Auditar no es desconfiar de todo ni repetir el análisis entero. Es concentrar la verificación en las afirmaciones que cambian la decisión o cuyo error tendría mayor impacto. La distinción es sutil pero decisiva: la desconfianza total paraliza el trabajo, mientras que la auditoría sistemática lo protege sin anular la utilidad de la herramienta."></div>
+            </div>
+          </div>
+        </div>
+        <div class="ova-evalquiz__slide" data-slide="r7" data-section="Tema 1 — Auditar críticamente los resultados obtenidos" data-section-color="acento">
+          <div class="up-eval__cuerpo">
+            <div class="ova-quiz">
+              <span class="up-eval__tema">Tema 1 — Auditar críticamente los resultados obtenidos</span>
+              <h3 class="ova-quiz__question">¿Qué describe el sesgo de automatización?</h3>
+              <div class="ova-quiz__opts">
+            <button class="ova-quiz__opt" data-correct="true">
+              <strong>A.</strong> Confiar más en una recomendación por provenir de un sistema
+            </button>
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>B.</strong> Exigir más evidencia a un sistema que a un colega
+            </button>
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>C.</strong> Ajustar el criterio de decisión luego de ver el análisis
+            </button>
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>D.</strong> Aceptar la primera alternativa generada por la herramienta sin comparar
+            </button>
+              </div>
+              <div class="ova-quiz__feedback"
+                   data-correct="Es el error inverso a la alucinación. El problema no está en que el sistema mienta, sino en que bajamos la guardia frente a él más de lo que la bajaríamos frente a una persona. Parasuraman y Riley (1997) lo describieron en la investigación de factores humanos y observaron que se intensifica justamente cuando aceptar la salida del sistema reduce la carga de trabajo."
+                   data-wrong="Es el error inverso a la alucinación. El problema no está en que el sistema mienta, sino en que bajamos la guardia frente a él más de lo que la bajaríamos frente a una persona. Parasuraman y Riley (1997) lo describieron en la investigación de factores humanos y observaron que se intensifica justamente cuando aceptar la salida del sistema reduce la carga de trabajo."></div>
+            </div>
+          </div>
+        </div>
+        <div class="ova-evalquiz__slide" data-slide="r8" data-section="Tema 1 — Auditar críticamente los resultados obtenidos" data-section-color="acento">
+          <div class="up-eval__cuerpo">
+            <div class="ova-quiz">
+              <span class="up-eval__tema">Tema 1 — Auditar críticamente los resultados obtenidos</span>
+              <h3 class="ova-quiz__question">Si ninguna de las tres fuentes confirma una afirmación relevante, corresponde:</h3>
+              <div class="ova-quiz__opts">
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>A.</strong> Incluirla como hecho comprobado dentro del informe de resultados
+            </button>
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>B.</strong> Pedir a la herramienta una reformulación con otras palabras
+            </button>
+            <button class="ova-quiz__opt" data-correct="true">
+              <strong>C.</strong> Tratarla como hipótesis y declararla explícitamente en la recomendación
+            </button>
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>D.</strong> Reemplazarla por el promedio histórico registrado en el sistema
+            </button>
+              </div>
+              <div class="ova-quiz__feedback"
+                   data-correct="Una afirmación sin confirmar no queda descartada, pero cambia de estatus: pasa de hecho a hipótesis y debe presentarse como tal. Lo que no puede hacer es sostener la decisión en silencio. Dejar registro de qué se verificó, con cuál fuente, y qué quedó sin verificar es lo que permite a quien aprueba calibrar cuánto peso darle a cada parte del argumento."
+                   data-wrong="Una afirmación sin confirmar no queda descartada, pero cambia de estatus: pasa de hecho a hipótesis y debe presentarse como tal. Lo que no puede hacer es sostener la decisión en silencio. Dejar registro de qué se verificó, con cuál fuente, y qué quedó sin verificar es lo que permite a quien aprueba calibrar cuánto peso darle a cada parte del argumento."></div>
+            </div>
+          </div>
+        </div>
+        <div class="ova-evalquiz__slide" data-slide="r9" data-section="Tema 2 — Construir y comunicar la recomendación" data-section-color="info">
+          <div class="up-eval__cuerpo">
+            <div class="ova-quiz">
+              <span class="up-eval__tema">Tema 2 — Construir y comunicar la recomendación</span>
+              <h3 class="ova-quiz__question">¿Qué tres elementos hacen que una recomendación se sostenga frente a quien aprueba?</h3>
+              <div class="ova-quiz__opts">
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>A.</strong> Metodología detallada, glosario técnico y anexo con los cálculos
+            </button>
+            <button class="ova-quiz__opt" data-correct="true">
+              <strong>B.</strong> Criterio explícito, incertidumbre declarada y lenguaje de quien decide
+            </button>
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>C.</strong> Resumen extenso, gráfico comparativo y listado de fuentes citadas
+            </button>
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>D.</strong> Cronograma semanal, presupuesto estimado y equipo asignado al proyecto
+            </button>
+              </div>
+              <div class="ova-quiz__feedback"
+                   data-correct="Los tres cubren necesidades distintas de quien escucha: contra qué se está evaluando (criterio), cuánta certeza real hay detrás (incertidumbre) y qué hacer a continuación (lenguaje de impacto y siguiente paso). Un criterio implícito es, en la práctica, un criterio que quien decide no puede usar, porque no tiene forma de saber con qué vara se midió la alternativa propuesta."
+                   data-wrong="Los tres cubren necesidades distintas de quien escucha: contra qué se está evaluando (criterio), cuánta certeza real hay detrás (incertidumbre) y qué hacer a continuación (lenguaje de impacto y siguiente paso). Un criterio implícito es, en la práctica, un criterio que quien decide no puede usar, porque no tiene forma de saber con qué vara se midió la alternativa propuesta."></div>
+            </div>
+          </div>
+        </div>
+        <div class="ova-evalquiz__slide" data-slide="r10" data-section="Tema 2 — Construir y comunicar la recomendación" data-section-color="info">
+          <div class="up-eval__cuerpo">
+            <div class="ova-quiz">
+              <span class="up-eval__tema">Tema 2 — Construir y comunicar la recomendación</span>
+              <h3 class="ova-quiz__question">¿Qué favorece la transferencia de lo aprendido a un contexto nuevo?</h3>
+              <div class="ova-quiz__opts">
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>A.</strong> Repetir el mismo caso resuelto hasta memorizar todos sus pasos
+            </button>
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>B.</strong> Confiar en que la práctica previa se aplicará automáticamente después
+            </button>
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>C.</strong> Aumentar el número de herramientas de IA usadas por caso
+            </button>
+            <button class="ova-quiz__opt" data-correct="true">
+              <strong>D.</strong> Reconocer explícitamente qué se mantiene y qué cambia entre contextos
+            </button>
+              </div>
+              <div class="ova-quiz__feedback"
+                   data-correct="Perkins y Salomon (1992) señalan que la transferencia no ocurre de forma automática. Quien resolvió bien el caso de la campaña no resolverá por sí solo uno de logística o de talento humano, salvo que nombre de manera explícita qué principio se conserva —el criterio previo, el hábito de auditar— y qué cambia al pasar de un contexto al otro."
+                   data-wrong="Perkins y Salomon (1992) señalan que la transferencia no ocurre de forma automática. Quien resolvió bien el caso de la campaña no resolverá por sí solo uno de logística o de talento humano, salvo que nombre de manera explícita qué principio se conserva —el criterio previo, el hábito de auditar— y qué cambia al pasar de un contexto al otro."></div>
+            </div>
+          </div>
+        </div>
+        <div class="ova-evalquiz__slide" data-slide="apareamiento" data-section="Conceptos de la unidad" data-section-color="acento">
+          <div class="up-eval__cuerpo">
+            <span class="up-eval__tema">Conceptos de la unidad</span>
+            <h3 class="ova-quiz__question">Relacione cada concepto de la columna izquierda con la definición que le corresponde en la columna derecha.</h3>
+            <p style="color:var(--text-mut);margin:0 0 20px;">Primero el concepto, después su definición.</p>
+            <div class="ova-empar">
+              <div class="ova-empar__col">
+              <button class="ova-empar__item" data-ova-match="C">Alucinación</button>
+              <button class="ova-empar__item" data-ova-match="A">Sesgo de automatización</button>
+              <button class="ova-empar__item" data-ova-match="E">Técnica de las tres fuentes</button>
+              <button class="ova-empar__item" data-ova-match="B">Incertidumbre declarada</button>
+              <button class="ova-empar__item" data-ova-match="D">Transferencia</button>
+              </div>
+              <div class="ova-empar__col">
+              <button class="ova-empar__item" data-ova-match="A">Confianza aumentada en una salida por provenir de un sistema.</button>
+              <button class="ova-empar__item" data-ova-match="B">Enunciado explícito del grado de certeza que respalda la recomendación.</button>
+              <button class="ova-empar__item" data-ova-match="C">Información incorrecta presentada con apariencia de certeza y precisión.</button>
+              <button class="ova-empar__item" data-ova-match="D">Aplicación de lo aprendido en una situación distinta a la original.</button>
+              <button class="ova-empar__item" data-ova-match="E">Contraste de la afirmación con dato interno, experiencia o fuente externa.</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ova-evalquiz__slide" data-slide="cierre">
+          <div class="ova-evalquiz__section" style="text-align:left;">
+            <h2 style="margin:0 0 14px;">Evaluación completada</h2>
+            <p style="max-width:60ch;">Repasar las retroalimentaciones vale tanto como acertar: cada una explica
+              por qué una opción sostiene la decisión y las otras no.</p>
+            <button class="ova-evalquiz__btn" data-evalquiz-restart style="margin-top:22px;">
+              <iconify-icon icon="mdi:refresh"></iconify-icon> Volver a intentarlo
+            </button>
+          </div>
+        </div>
+
+        <div class="ova-evalquiz__nav" data-evalquiz-nav>
+          <button class="ova-evalquiz__btn ova-evalquiz__btn--prev" data-evalquiz-prev aria-label="Pregunta anterior" title="Anterior"><iconify-icon icon="mdi:arrow-left"></iconify-icon></button>
+          <div class="ova-evalquiz__progress-bar">
+            <div class="ova-evalquiz__progress-fill" data-evalquiz-progress></div>
+          </div>
+          <span class="ova-evalquiz__counter" data-evalquiz-counter></span>
+          <button class="ova-evalquiz__btn ova-evalquiz__btn--primary" data-evalquiz-next>Siguiente <iconify-icon icon="mdi:arrow-right"></iconify-icon></button>
+        </div>
+      </div>

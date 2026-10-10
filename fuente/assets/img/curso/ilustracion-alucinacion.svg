@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" width="1200" height="440" role="img"
+     aria-label="Una respuesta de la IA con una cifra, 38 %, y una referencia con autor, institución y año. Una línea sale de la referencia hacia un archivo de informes, y en el lugar donde debería estar el informe citado no hay nada.">
+  <!-- Ilustración de marca · Posgrados Panamericana (demo con la Unidad 2 de Scala), tema 3 (apertura)
+       Concepto: alucinación. La cifra se ve impecable, con autor, institución y
+       año; cuando se va a buscar la fuente, el lugar está vacío. Guion en
+       insumos/ILUSTRACIONES.md. Único amarillo: el hueco del estante. -->
+  <defs>
+    <linearGradient id="ilu-alucinacion-fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#E4EEEB"/>
+      <stop offset="55%"  stop-color="#EFEBE2"/>
+      <stop offset="100%" stop-color="#F7F4EE"/>
+    </linearGradient>
+    <filter id="ilu-alucinacion-sombra" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#0A4039" flood-opacity="0.16"/>
+    </filter>
+    <!-- Un informe de pie en el estante -->
+    <g id="ilu-alucinacion-informe">
+      <rect width="50" height="140" rx="7" fill="#0F5C51"/>
+      <rect x="11" y="20" width="28" height="6" rx="3" fill="#fff" opacity=".55"/>
+      <rect x="11" y="32" width="20" height="6" rx="3" fill="#fff" opacity=".32"/>
+      <rect x="0" y="106" width="50" height="8" fill="#fff" opacity=".18"/>
+    </g>
+  </defs>
+
+  <rect width="1200" height="440" rx="18" fill="url(#ilu-alucinacion-fondo)"/>
+
+  <!-- La respuesta de la IA: una tarjeta con cola de bocadillo -->
+  <g filter="url(#ilu-alucinacion-sombra)">
+    <path d="M138 64 H542 a18 18 0 0 1 18 18 V358 a18 18 0 0 1 -18 18 H196 L150 410 L158 376 H138 a18 18 0 0 1 -18 -18 V82 a18 18 0 0 1 18 -18 Z"
+          fill="#FFFFFF"/>
+  </g>
+  <!-- rótulo de la respuesta -->
+  <rect x="156" y="98" width="64" height="8" rx="4" fill="#0F5C51" opacity=".42"/>
+  <!-- la cifra, con toda la apariencia de certeza -->
+  <text x="154" y="200" font-family="Manrope, system-ui, sans-serif" font-size="96" font-weight="700"
+        fill="#0A4039" letter-spacing="-2">38 %</text>
+  <!-- la afirmación -->
+  <rect x="156" y="226" width="352" height="10" rx="5" fill="#0A4039" opacity=".28"/>
+  <rect x="156" y="246" width="262" height="10" rx="5" fill="#0A4039" opacity=".28"/>
+  <!-- la referencia: marcador de nota + autor · institución · año -->
+  <line x1="156" y1="290" x2="524" y2="290" stroke="#E3DDD0" stroke-width="2"/>
+  <circle cx="168" cy="322" r="12" fill="#0F5C51"/>
+  <text x="168" y="327" text-anchor="middle" font-family="Manrope, system-ui, sans-serif"
+        font-size="13" font-weight="600" fill="#fff">1</text>
+  <rect x="192" y="317" width="86" height="10" rx="5" fill="#0F5C51" opacity=".78"/>
+  <rect x="288" y="317" width="148" height="10" rx="5" fill="#0F5C51" opacity=".46"/>
+  <rect x="446" y="315" width="54" height="14" rx="7" fill="#0F5C51" opacity=".28"/>
+
+  <!-- Ir a buscar la fuente -->
+  <path d="M560 322 C 650 322, 690 132, 900 132"
+        fill="none" stroke="#0F5C51" stroke-width="3" stroke-dasharray="7 7"
+        stroke-linecap="round" opacity=".5"/>
+  <path d="M973 138 l 8 12 8 -12" fill="none" stroke="#0F5C51" stroke-width="3"
+        stroke-linecap="round" stroke-linejoin="round" opacity=".5"/>
+  <path d="M900 132 C 940 132, 981 132, 981 148" fill="none" stroke="#0F5C51" stroke-width="3"
+        stroke-dasharray="7 7" stroke-linecap="round" opacity=".5"/>
+
+  <!-- El archivo: la fuente ajena a la IA -->
+  <rect x="740" y="300" width="416" height="12" rx="6" fill="#0A4039" opacity=".22"/>
+  <rect x="762" y="312" width="372" height="4" rx="2" fill="#0A4039" opacity=".07"/>
+  <g>
+    <use href="#ilu-alucinacion-informe" x="766" y="160" opacity=".40"/>
+    <use href="#ilu-alucinacion-informe" x="824" y="160" opacity=".58"/>
+    <!-- el informe vecino se inclina hacia el hueco -->
+    <use href="#ilu-alucinacion-informe" x="882" y="160" opacity=".78" transform="rotate(7 932 300)"/>
+    <use href="#ilu-alucinacion-informe" x="1024" y="160" opacity=".62"/>
+    <use href="#ilu-alucinacion-informe" x="1082" y="160" opacity=".40"/>
+  </g>
+  <!-- Donde debería estar el informe citado: nada -->
+  <rect x="948" y="158" width="66" height="142" rx="8" fill="none"
+        stroke="#B9975B" stroke-width="3.5" stroke-dasharray="9 7" stroke-linecap="round"/>
+</svg>

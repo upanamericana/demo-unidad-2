@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400" role="img"
+     aria-label="La misma recomendación, dos veces. A la izquierda la entrega un colega y, antes de aceptarse, recibe tres preguntas. A la derecha la entrega un sistema y se acepta de inmediato, con un sello y sin preguntas.">
+  <!-- Ilustración de marca · Posgrados Panamericana (demo con la Unidad 2 de Scala), tema 3 (junto al stepper)
+       Concepto: sesgo de automatización. La misma recomendación: si viene de un
+       colega se le hacen preguntas; si viene de un sistema, se acepta sin más.
+       Guion en insumos/ILUSTRACIONES.md. Único amarillo: el sello del lado del sistema. -->
+  <defs>
+    <linearGradient id="ilu-automatizacion-fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#E4EEEB"/>
+      <stop offset="55%"  stop-color="#EFEBE2"/>
+      <stop offset="100%" stop-color="#F7F4EE"/>
+    </linearGradient>
+    <filter id="ilu-automatizacion-sombra" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#0A4039" flood-opacity="0.16"/>
+    </filter>
+    <!-- La recomendación: la misma tarjeta en las dos escenas -->
+    <g id="ilu-automatizacion-recomendacion">
+      <rect width="210" height="160" rx="14" fill="#FFFFFF" filter="url(#ilu-automatizacion-sombra)"/>
+      <rect x="26" y="26" width="92" height="8" rx="4" fill="#0A4039" opacity=".85"/>
+      <rect x="26" y="42" width="148" height="8" rx="4" fill="#0A4039" opacity=".28"/>
+      <rect x="26" y="106" width="16" height="30" rx="4" fill="#0F5C51" opacity=".35"/>
+      <rect x="50" y="90"  width="16" height="46" rx="4" fill="#0F5C51" opacity=".55"/>
+      <rect x="74" y="74"  width="16" height="62" rx="4" fill="#0F5C51"/>
+      <rect x="112" y="122" width="72" height="6" rx="3" fill="#0A4039" opacity=".22"/>
+      <rect x="112" y="108" width="52" height="6" rx="3" fill="#0A4039" opacity=".22"/>
+    </g>
+  </defs>
+
+  <rect width="1200" height="400" rx="18" fill="url(#ilu-automatizacion-fondo)"/>
+
+  <!-- Separación entre las dos escenas -->
+  <line x1="600" y1="64" x2="600" y2="336" stroke="#0A4039" stroke-width="2" opacity=".14"/>
+
+  <!-- ══ Escena 1 · viene de un colega ══ -->
+  <circle cx="142" cy="140" r="36" fill="#0F5C51"/>
+  <path d="M78 262 C 78 208, 206 208, 206 262 Z" fill="#0F5C51"/>
+  <line x1="214" y1="200" x2="248" y2="200" stroke="#0F5C51" stroke-width="3"
+        stroke-dasharray="7 7" stroke-linecap="round" opacity=".5"/>
+  <use href="#ilu-automatizacion-recomendacion" x="262" y="120"/>
+  <!-- La guardia que sí se conserva: preguntas antes de aceptar -->
+  <g font-family="Manrope, system-ui, sans-serif" font-size="24" font-weight="700" fill="#0F5C51" text-anchor="middle">
+    <circle cx="518" cy="150" r="21" fill="#EFEBE2"/><text x="518" y="159">?</text>
+    <circle cx="546" cy="200" r="21" fill="#EFEBE2"/><text x="546" y="209">?</text>
+    <circle cx="518" cy="250" r="21" fill="#EFEBE2"/><text x="518" y="259">?</text>
+  </g>
+
+  <!-- ══ Escena 2 · viene de un sistema ══ -->
+  <g>
+    <rect x="664" y="112" width="134" height="98" rx="12" fill="#0F5C51"/>
+    <rect x="682" y="132" width="66" height="7" rx="3.5" fill="#fff" opacity=".55"/>
+    <rect x="682" y="148" width="96" height="7" rx="3.5" fill="#fff" opacity=".32"/>
+    <rect x="682" y="164" width="80" height="7" rx="3.5" fill="#fff" opacity=".32"/>
+    <rect x="682" y="180" width="44" height="7" rx="3.5" fill="#fff" opacity=".32"/>
+    <rect x="718" y="210" width="26" height="18" fill="#0F5C51" opacity=".55"/>
+    <rect x="696" y="228" width="70" height="8" rx="4" fill="#0F5C51" opacity=".55"/>
+  </g>
+  <line x1="812" y1="200" x2="846" y2="200" stroke="#0F5C51" stroke-width="3"
+        stroke-dasharray="7 7" stroke-linecap="round" opacity=".5"/>
+  <use href="#ilu-automatizacion-recomendacion" x="860" y="120"/>
+  <!-- La guardia baja: se acepta de inmediato -->
+  <circle cx="1116" cy="200" r="32" fill="#B9975B"/>
+  <path d="M1100 200 l 11 11 22 -24" fill="none" stroke="#0A4039" stroke-width="5.5"
+        stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,1403 @@
+/* =========================================================
+   Capa de marca · Posgrados Panamericana (Universidad Panamericana)
+   ---------------------------------------------------------
+   Se carga DESPUÉS de core.css. Solo ajusta lo que distingue
+   a Posgrados Panamericana; el motor no se toca. Ver ../INSTITUCION.md
+   Nace de la capa de Andina (misma estructura RED de Scala, mismos
+   componentes, prefijo up- en vez de ua-) con el ADN del Manual de
+   marca UP 2020: Laurentian + Seravek, verde Posgrados y dorado,
+   y el «Panamericanismo»: Franco Cuartel + Tahalí (pp. 208-212).
+   ========================================================= */
+
+/* --- Recursos gráficos de la marca, embebidos ----------------------------
+   Viajan dentro de la hoja para que ningún curso dependa de copiarlos:
+     tahalí    la banda diagonal del escudo (pp. 36-37, 208-209), en dorado,
+               verde, verde claro y blanco. Parallelogramo de 0,0→36,0→100,100→64,100:
+               cae de arriba-izquierda a abajo-derecha, como en el manual.
+     eyebrow   el mismo Tahalí en miniatura: el marcador que el manual pone
+               en la esquina de cada página.
+     textura   el wordmark apilado «Pana / meri / cana» recortado, como lo usa
+               la submarca en sus texturas (pp. 130, 132, 220, 227). Es máscara:
+               toma el color que se le dé, tono sobre tono. */
+:root {
+  --up-tahali-dorado: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,0 36,0 100,100 64,100' fill='%23B9975B'/%3E%3C/svg%3E");
+  --up-tahali-verde:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,0 36,0 100,100 64,100' fill='%230F5C51'/%3E%3C/svg%3E");
+  --up-tahali-claro:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,0 36,0 100,100 64,100' fill='%233F7D74'/%3E%3C/svg%3E");
+  --up-tahali-blanco: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,0 36,0 100,100 64,100' fill='%23FFFFFF'/%3E%3C/svg%3E");
+  --up-eyebrow:       url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 10'%3E%3Cpolygon points='0,0 6,0 16,10 10,10' fill='%23B9975B'/%3E%3C/svg%3E");
+  --up-textura: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%22231 225 614 614%22 fill=%22%23FFFFFF%22%3E %3Cpath d=%22M779.35,814.31c-15.54,0-27.55-11.54-27.96-23.5-.32-9.33,2.31-22.27,20.58-32.05,0,0,33.56-17.27,37.41-19.72v55.23s-18.33,20.04-30.03,20.04M358.08,239.19h472.8v52.87c-7.07-12.48-21.34-18.61-39.47-18.52l-33.41,12.62c-15.49,5.95-30.32,12.27-30.23,26.08.09,13.81,9.76,17.21,16.68,17.16,6.88-.04,14.81-5.28,16.47-10.45,0,0-5.52-5.15-5.56-12.03-.05-6.93,4.39-17.32,21.66-17.4,17.25-.11,31.79,10.17,31.94,36.05l.05,6.3c-11.11,6.88-58.13,30.17-58.13,30.17-14.93,7.12-27.89,17.55-27.8,38.26.13,20.71,20.26,36.83,49.04,36.66,16.34-9.7,27.4-18.11,37.67-28.52.09,16.6,8.2,27.29,21.1,28.02v36.16h-3.98c-9.7,8.25-27.9,14.13-42.16,14.87v6.9c17.27,5.17,20.71,8.64,20.71,25.89v77.67c0,19-4.82,23.15-23.82,24.17v8.64h49.25v56.63c-7.23-11.81-21.16-17.72-38.76-17.72l-33.47,12.44c-15.54,5.85-30.39,12.08-30.39,25.89s9.68,17.27,16.57,17.27,14.85-5.2,16.55-10.37c0,0-5.5-5.17-5.5-12.07s4.48-17.27,21.75-17.27,31.75,10.36,31.75,36.24v6.28c-11.12,6.82-58.32,29.84-58.32,29.84-14.96,7.05-28,17.4-28,38.11,0,11.94,6.84,22.27,17.98,28.98h-43.55c-7.05-2.95-9.3-8.64-9.3-21.23v-83.71c0-36.98-18.07-53.37-51.86-50.4-15.79,8.66-49.64,26.25-49.64,26.25l.35-25.21h-4.74c-11.6,6.99-28.44,13.24-42.91,14.85v6.9c17.27,5.17,20.71,8.64,20.71,25.89v85.44c0,12.14-2.01,18.15-8.38,21.23h-38.71l14.57-14.91-2.56-3.36c-5.17,3.45-8.96,5.87-15.17,5.87-5.89,0-11.06-6.21-11.06-18.31v-86.3c0-25.89-18.33-38.33-44.21-38.33l-33.48,12.44c-15.54,5.85-30.38,12.08-30.38,25.89s9.67,17.27,16.57,17.27,14.84-5.2,16.57-10.37c0,0-5.52-5.17-5.52-12.07s4.48-17.27,21.75-17.27,31.75,10.36,31.75,36.24v6.28c-11.13,6.82-58.3,29.84-58.3,29.84-14.98,7.05-28,17.4-28,38.11,0,11.94,6.82,22.27,17.98,28.98h-63.9c.8-.39,1.75-.76,2.47-1.17l23.61-21.62-.24-8.53c-12.48,9-30.47,15.21-50.53,15.21-31.03,0-54.97-21.87-55.9-66.91-.73-36.26,15.69-60.65,44.79-60.65,18.53,0,33.93,7.96,33.93,20.49,0,7.57-4.61,12.08-9.78,11.92-.2,6.58,6.06,13.44,15.14,13.44,10.97,0,19.18-9.24,18.96-20.19-.44-19.99-21.47-36.6-56.9-36.6-22.87,0-45.44,10.17-60.12,29.17v-68.81h46.57v-8.64c-18.31-1.73-22.1-5.17-22.1-24.17v-86.31c8.64-6.88,24.86-18.98,40.4-18.98,24.15,0,30.38,15.54,30.38,39.68v65.6c0,19-4.15,22.44-22.11,24.17v8.64h71.11v-8.64c-18.27-1.73-22.07-5.17-22.07-24.17v-72.48c0-6.93-.37-13.83-.37-13.83,8.66-6.88,25.21-18.98,40.75-18.98,24.17,0,30.41,15.54,30.41,39.68v65.6c0,19-4.17,22.44-22.12,24.17v8.64h73.19v-8.64c-19.33-1.73-24.15-5.17-24.15-24.17v-75.94c0-37.74-22.03-53.67-53.01-50.4-18.2,14.28-46.76,29.69-46.76,29.69-7.06-25.32-25.25-33.52-49.97-29.69-19.91,14.28-45.98,27.96-45.98,27.96l.32-26.94h-5.71c-4.01,4.35-11.23,7.84-18.77,10.34v-50.27h61.87v-8.98c-17.24-2.08-22.43-3.46-27.61-8.61-5.19-5.19-5.86-12.1-5.86-29.37v-32.25h37.98c13.8,0,32.81-3.44,46.6-15.52,13.82-12.1,24.17-27.61,24.17-53.51,0-20.63-9.93-35.5-24.15-45.25M576.04,471.56c-39.08,0-75.33,29.84-75.33,83.23,0,42.39,27.2,80.07,75.07,80.07,10.1,0,15.38-1.56,24.97-4.72,20.99-14.54,34.43-23.63,34.43-23.63v-8.7c-14.37,8.81-28.52,12.89-49.41,12.89-34.9,0-51.42-30.01-53.34-50.12l102.75-20.56c3.79-52.97-27.85-68.47-59.14-68.47M706.23,507.14l.34-34.54h-6.16c-8.91,6.64-27.61,13.85-41.49,14.84v6.93c17.25,5.17,20.71,8.64,20.71,25.89v77.69c0,18.98-4.83,23.13-23.8,24.15v8.64h79.74v-8.64c-25.91-1.73-29-5.17-29-24.15v-75.61c6.22-10.36,17.94-29.35,27.61-29.35,3.44,0,5.17,2.06,5.17,4.48,0,2.77-2.05,4.5-2.05,4.5,2.76,6.9,7.94,8.63,14.82,8.63s16.59-7.27,16.59-19.35-8.98-19.67-21.08-19.67c-6.14,0-13.14,3.36-18.02,7.68-11.84,15-23.39,27.88-23.39,27.88M534.3,432.68h72.84v-8.64c-17.96-2.08-22.12-5.19-22.12-24.17v-88.04c8.64-6.9,26.6-17.24,40.4-17.24,25.89,0,33.83,15.52,33.83,39.68v65.6c0,18.98-4.13,22.44-22.08,24.17v8.64h73.19v-8.64c-19.35-1.73-24.17-5.19-24.17-24.17v-75.94c0-36.98-18.09-53.39-51.87-50.4-15.78,8.64-49.62,26.23-49.62,26.23l.32-25.21h-4.71c-11.61,7.01-28.44,13.26-42.91,14.85v6.9c17.27,5.19,20.71,8.64,20.71,25.91v77.67c0,18.98-4.83,23.13-23.8,24.17v8.64ZM472.38,331.85c-11.08,6.88-58.13,30.17-58.13,30.17-14.94,7.12-27.92,17.55-27.79,38.26.13,20.71,20.26,36.83,49.02,36.66,16.34-9.7,27.4-18.11,37.7-28.52.08,17.27,8.81,28.24,22.59,28.18,5-.02,9.98-1.73,14.65-4.22l18.15-18.85-2.58-3.36c-5.15,3.49-8.93,5.93-15.13,5.97-5.91.02-11.1-6.14-11.19-18.24l-.5-86.31c-.15-25.88-18.52-38.21-44.4-38.07l-33.41,12.62c-15.5,5.95-30.3,12.27-30.21,26.08.06,13.81,9.76,17.21,16.66,17.16,6.88-.04,14.82-5.28,16.49-10.45,0,0-5.54-5.15-5.58-12.03-.04-6.93,4.4-17.32,21.67-17.4,17.24-.11,31.81,10.17,31.94,36.05l.04,6.3ZM751.35,394.94c.48,11.94,12.58,23.41,28.11,23.33,11.73-.07,29.93-20.22,29.93-20.22l-.32-55.21c-3.83,2.47-37.31,19.91-37.31,19.91-18.17,9.89-20.77,22.85-20.4,32.18M442.84,418.27c11.73-.07,29.93-20.22,29.93-20.22l-.32-55.21c-3.81,2.47-37.29,19.91-37.29,19.91-18.2,9.89-20.78,22.85-20.43,32.18.49,11.94,12.57,23.41,28.11,23.33M577.34,482.56c-28.68,0-46.83,25.5-46.1,67.78l74.38-14.92c5.65-38.8-12.79-52.87-28.28-52.87M809.71,804.63c-7.4,7.4-15.31,13.81-25.15,20.34h31.06c-3.79-4.89-5.91-11.86-5.91-20.34M276.92,239.21c-2.77,2.43-3.44,6.56-3.44,15.21v88.04h34.17c21.75,0,40.73-18.31,40.73-54.56,0-27.61-13.48-42.95-35.15-48.71h-36.29l-.02.02M245.09,803.64v21.34h25.41c-10.24-5.1-18.81-12.44-25.41-21.34M472.23,804.63c-7.44,7.4-15.29,13.81-25.17,20.34h31.03c-3.78-4.89-5.87-11.86-5.87-20.34M661.28,803.75v-73.34c0-24.17-7.94-39.71-33.84-39.71-13.78,0-31.75,10.36-40.38,17.27v95.78c0,12.81,2.01,18.33,8.76,21.23h57.07c6.47-2.95,8.4-8.64,8.4-21.23M471.86,794.27v-55.23c-3.85,2.45-37.42,19.72-37.42,19.72-18.24,9.78-20.88,22.72-20.58,32.05.39,11.96,12.44,23.5,27.96,23.5,11.71,0,30.03-20.04,30.03-20.04%22/%3E %3C/svg%3E");
+}
+
+/* =========================================================
+   TIPOGRAFÍA · Laurentian (display) + Seravek (cuerpo)
+   ---------------------------------------------------------
+   Cabezas y destacados en la serif (manual pp. 30, 213-214); el
+   cuerpo en la sans (p. 31). Los sustitutos libres (Crimson Pro,
+   Source Sans 3) llegan por fuentes.html; ver paleta.css.
+   ========================================================= */
+body { font-family: var(--font-body); }
+.ova-screen p, .ova-screen li { line-height: 1.68; }
+
+h1, h2, h3, h4, .ova-screen__title, .ova-quiz__question, .ova-acordeon__title, .ova-vs__card h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.005em;
+}
+.ova-screen__title { font-weight: 600; line-height: 1.08; letter-spacing: -0.01em; }
+.ova-screen__title .up-suave {
+  font-weight: 400;
+  color: color-mix(in srgb, var(--text-head) 64%, transparent);
+}
+
+/* --- Eyebrow: lo precede el Tahalí en miniatura (el marcador de página del
+       manual), en Seravek con tracking amplio ------------------------------ */
+.ova-screen__eyebrow {
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--c-dorado-tinta);
+}
+.ova-screen__eyebrow::before {
+  background: var(--up-eyebrow) left center / contain no-repeat;
+  width: 16px; height: 10px;
+  border-radius: 0;
+}
+
+/* --- Destacado: el gesto tipográfico de la marca (manual p. 214) ------------
+   Una o dos palabras en Laurentian Bold, EN BAJAS, tracking cerrado, en el
+   color de marca. Es el remate del titular: uno por titular (en Scala era
+   .sl-italic; en Andina, .ua-remate). ------------------------------------- */
+.up-destacado {
+  font-family: var(--font-display);
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--c-acento);
+}
+
+/* --- Cita / highlight editorial ------------------------------------------
+   Laurentian en itálica, grande; el destacado en Bold. Filo dorado: lo que
+   se destaca. ----------------------------------------------------------- */
+.up-quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.42rem;
+  line-height: 1.5;
+  color: var(--text-head);
+  background: var(--c-lino);
+  border-radius: var(--r-md);
+  padding: 32px 36px;
+  margin: 36px 0;
+  border-left: 4px solid var(--c-dorado);
+}
+.up-quote .up-destacado { font-style: normal; }
+
+/* --- Callout "Para reflexionar": el dorado como marca, no como estado.
+       Se distingue del warning (naranja tostado) por color e icono --- */
+.ova-callout--reflexion {
+  background: var(--c-dorado-palido);
+  border-left-color: var(--c-dorado);
+}
+.ova-callout--reflexion .ova-callout__tag { color: var(--c-dorado-tinta); }
+.ova-callout--reflexion .ova-callout__ico {
+  background: color-mix(in srgb, var(--c-dorado) 28%, transparent);
+  color: var(--c-dorado-tinta);
+  box-shadow: none;
+}
+
+/* --- KPI: filo dorado arriba, el dato en Laurentian verde --- */
+.ova-kpi { border-top: 3px solid var(--c-dorado); }
+.ova-kpi__value { color: var(--c-acento); font-family: var(--font-display); font-weight: 700; }
+
+/* --- El Tahalí · recurso gráfico de marca ---------------------------------
+   La banda diagonal del escudo. Es la firma de Posgrados Panamericana como la
+   rueda lo es de Scala y los cuadros de Andina. Un Tahalí por pantalla. ---- */
+.up-tahali {
+  display: inline-block;
+  width: var(--up-tahali-w, 48px);
+  height: var(--up-tahali-h, 72px);
+  flex-shrink: 0;
+  background: var(--up-tahali-dorado) center / 100% 100% no-repeat;
+}
+
+/* --- Imagen enmarcada: el radio de módulo también aplica a la foto --- */
+.up-figura {
+  border-radius: var(--r-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  margin: 32px 0;
+}
+.up-figura img { display: block; width: 100%; height: auto; }
+.up-figura figcaption {
+  font-size: 0.86rem;
+  color: var(--text-mut);
+  padding: 14px 20px;
+  background: var(--c-lino);
+}
+
+/* --- Bloque de dos columnas texto + imagen --- */
+.up-split {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 40px;
+  align-items: start;
+  margin: 40px 0;
+}
+.up-split .up-figura { margin: 0; }
+.up-split .up-figura img { max-height: 420px; object-fit: cover; }
+@media (max-width: 860px) { .up-split { grid-template-columns: 1fr; gap: 28px; } }
+
+/* --- Logo de marca: el negativo no necesita la caja blanca que el motor pone
+       para logos a color; sobre el sidebar verde hondo se pierde. Ancho: el
+       mínimo digital del logo completo (110 px, §1.5); el wordmark es apilado y
+       a 150 px ocupaba un cuarto del alto del sidebar (ajuste del 2026-10-10) --- */
+.ova-brand-logo--desktop {
+  background: none;
+  padding: 0;
+  max-width: 110px;
+}
+.ova-brand-logo--mobile { background: none; padding: 0; height: 56px; }
+
+/* --- Stepper: la numeración en dorado claro sobre el verde hondo (4,8:1).
+       Se excluye el tema "clara": ahí el círculo es blanco y el dorado claro
+       no se leería; sobre claro vuelve el verde. */
+:root:not([data-version="clara"]) .ova-step__num span {
+  background: none;
+  color: var(--c-dorado-claro);
+  -webkit-text-fill-color: var(--c-dorado-claro);
+}
+
+/* --- Logo por tema · el negativo (blanco) se pierde sobre el sidebar blanco
+       del tema "clara": ahí entra la versión verde oficial. En "hibrida" y
+       "oscura" el sidebar es verde hondo y sigue el negativo. */
+[data-version="clara"] .ova-brand-logo--desktop {
+  content: url('../img/logos/up-logo-verde.svg');
+}
+[data-version="clara"] .ova-brand-logo--mobile {
+  content: url('../img/logos/up-marca-verde.svg');
+}
+
+/* --- Selector de tema minimalista ----------------------------------------
+   El motor lo dibuja como "🎨 Tema · [🌙 Oscura] [☀ Clara]". Compite con los
+   botones de la barra y no aporta: solo hay dos temas y cada botón ya tiene
+   su `title`. Se queda en dos iconos sin caja exterior; los textos se ocultan
+   de forma accesible (clip, no display:none) para que el botón conserve su
+   nombre accesible. ------------------------------------------------------- */
+.ova-version-switch {
+  padding: 0;
+  gap: 0;
+  background: none;
+  border: none;
+  backdrop-filter: none;
+}
+.ova-version-switch__label { display: none; }
+.ova-version-switch__pills {
+  gap: 2px;
+  padding: 3px;
+  background: color-mix(in srgb, var(--bg-muted) 60%, transparent);
+  box-shadow: none;
+}
+.ova-version-switch button { padding: 7px; gap: 0; }
+.ova-version-switch button span {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.ova-version-switch button iconify-icon { font-size: 1.05rem; opacity: .6; }
+.ova-version-switch button.is-active {
+  background: color-mix(in srgb, var(--c-acento) 12%, transparent);
+  color: var(--c-acento);
+  box-shadow: none;
+}
+
+/* --- Apertura de unidad --------------------------------------------------
+   El bloque con el que abre cada introducción: una idea clave o una pregunta
+   que enmarca la unidad. No lleva etiqueta —el texto es el protagonista— y
+   resalta por escala y aire, no por encajonarse como un aviso más. Es un
+   Franco Cuartel de color (lino) con su Tahalí dorado en la esquina.
+   Uso: <div class="up-apertura"><p>…</p></div>
+        modificador --pregunta cuando la apertura es una pregunta. ---------- */
+.up-apertura {
+  position: relative;
+  margin: 44px 0;
+  padding: 38px 44px 38px 46px;
+  background: var(--c-lino);
+  border-radius: var(--r-md);
+  max-width: 920px;
+  overflow: hidden;
+  font-family: var(--font-display);
+  font-size: clamp(1.24rem, 2vw, 1.56rem);
+  line-height: 1.42;
+  font-weight: 400;
+  letter-spacing: -0.005em;
+  color: var(--text-head);
+}
+.up-apertura::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 26px; bottom: 26px;
+  width: 5px;
+  background: var(--c-acento);
+}
+/* el Tahalí dorado asoma por la esquina inferior derecha */
+.up-apertura::after {
+  content: '';
+  position: absolute;
+  right: 22px; bottom: 0;
+  width: 40px; height: 62px;
+  background: var(--up-tahali-dorado) center / 100% 100% no-repeat;
+  opacity: .9;
+}
+.up-apertura p { margin: 0; padding-right: 72px; }
+.up-apertura p + p { margin-top: 16px; }
+.up-apertura .up-destacado { font-size: 1em; }
+
+/* Variante pregunta: el signo de interrogación hace de marca visual */
+.up-apertura--pregunta { padding-left: 92px; }
+.up-apertura--pregunta::after {
+  content: '?';
+  position: absolute;
+  left: 44px; top: 30px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 2.8rem;
+  line-height: 1;
+  color: var(--c-acento);
+  background: none;
+  width: auto; height: auto;
+  right: auto; bottom: auto;
+  opacity: 1;
+}
+@media (max-width: 720px) {
+  .up-apertura { padding: 28px 24px 28px 28px; }
+  .up-apertura p { padding-right: 40px; }
+  .up-apertura--pregunta { padding-left: 28px; }
+  .up-apertura--pregunta::after { position: static; display: block; margin-bottom: 8px; }
+}
+
+/* --- Ilustración de marca a ancho completo -------------------------------
+   Alternativa a la foto en las aperturas: no deja huecos por diferencia de
+   altura con el texto y no depende de licencias. ------------------------- */
+.up-ilustracion {
+  margin: 40px 0;
+  border-radius: var(--r-md);
+  overflow: hidden;
+}
+.up-ilustracion img { display: block; width: 100%; height: auto; }
+.up-ilustracion figcaption {
+  font-size: .86rem;
+  color: var(--text-mut);
+  padding: 14px 4px 0;
+}
+
+/* --- Sistema de énfasis tipográfico --------------------------------------
+   Dos familias y un destacado, nada más. La jerarquía la da el cambio de
+   familia (serif para lo que titula, sans para lo que explica), no apilar
+   tamaños ni pesos.
+
+     .up-suave      Seravek 300 / Laurentian 400 claro · lo que acompaña
+     (cuerpo)       Seravek 400 · el texto por defecto
+     strong         Seravek 600 · la palabra o frase que carga el sentido
+     .up-destacado  Laurentian 700 en bajas, verde · el remate: uno por bloque
+
+   Tope: una sola idea resaltada por frase. En un párrafo que enumera se
+   admite una negrita por elemento; fuera de ese caso, si hay dos negritas
+   en la misma frase ninguna destaca. ----------------------------------- */
+.up-suave { font-weight: 300; }
+
+/* Lead: más grande y más ligero, para que la entrada respire */
+.ova-screen__lead {
+  font-weight: 300;
+  font-size: 1.22rem;
+  line-height: 1.6;
+  color: color-mix(in srgb, var(--text-pri) 88%, transparent);
+}
+
+/* Negrita del cuerpo: 600 y en el color de los títulos, para que se despegue
+   del párrafo sin recurrir al color de marca (que significa "clicable") */
+.ova-screen p strong,
+.up-apertura strong {
+  font-weight: 600;
+  color: var(--text-head);
+}
+
+/* --- Escenas · pasos de un proceso en formato explicativo -----------------
+   Cada paso es una escena con número protagonista (en Laurentian), icono
+   grande y el texto del DI íntegro. Conector punteado entre escenas para que
+   se lean como recorrido. ------------------------------------------------- */
+.up-escenas { display: flex; flex-direction: column; gap: 18px; margin: 44px 0; }
+
+.up-escena {
+  position: relative;
+  display: grid;
+  grid-template-columns: 104px 1fr;
+  gap: 30px;
+  align-items: start;
+  padding: 34px 38px;
+  background: var(--bg-surface);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-sm);
+}
+.up-escena:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 90px; bottom: -18px;
+  width: 2px; height: 18px;
+  background: repeating-linear-gradient(
+    to bottom, color-mix(in srgb, var(--c-acento) 45%, transparent) 0 5px, transparent 5px 10px);
+}
+.up-escena__marca { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.up-escena__num {
+  font-family: var(--font-display);
+  font-size: 3.4rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: color-mix(in srgb, var(--c-acento) 50%, transparent);
+}
+.up-escena__icono {
+  width: 62px; height: 62px;
+  border-radius: var(--r-md);
+  display: grid; place-items: center;
+  font-size: 1.75rem;
+  background: color-mix(in srgb, var(--c-acento) 12%, transparent);
+  color: var(--c-acento);
+}
+.up-escena__titulo {
+  margin: 4px 0 12px;
+  font-size: 1.36rem;
+  font-weight: 600;
+  color: var(--text-head);
+}
+.up-escena__texto { margin: 0; }
+
+@media (max-width: 720px) {
+  .up-escena { grid-template-columns: 1fr; gap: 16px; padding: 26px 24px; }
+  .up-escena__marca { flex-direction: row; align-items: center; gap: 16px; }
+  .up-escena:not(:last-child)::after { left: 42px; }
+}
+
+/* --- Ciclo · escalera de Francos Cuarteles + pasos --------------------------
+   El recurso de marca para un recorrido por pasos: cada paso es un Franco
+   Cuartel un peldaño más arriba, con su Tahalí. La escalera hace de imagen
+   grande y los cuatro pasos quedan visibles a la vez. ---------------------- */
+.up-ciclo {
+  display: grid;
+  grid-template-columns: minmax(280px, 38%) 1fr;
+  gap: 44px;
+  align-items: center;
+  margin: 44px 0;
+}
+.up-ciclo__escalera { width: 100%; height: auto; display: block; }
+.up-ciclo__escalera text { font-family: var(--font-display); }
+.up-ciclo__pasos { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+.up-paso {
+  --tinte: var(--c-acento);
+  position: relative;
+  padding: 22px 22px 22px 24px;
+  background: var(--bg-surface);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-sm);
+  border-left: 4px solid var(--tinte);
+}
+.up-paso__num {
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  color: var(--tinte);
+}
+.up-paso__titulo {
+  margin: 6px 0 8px;
+  font-size: 1.12rem;
+  font-weight: 600;
+  color: var(--text-head);
+  display: flex; align-items: center; gap: 9px;
+}
+.up-paso__titulo iconify-icon { font-size: 1.3rem; color: var(--tinte); }
+.up-paso__desc { margin: 0; font-size: .94rem; color: var(--text-mut); line-height: 1.55; }
+
+@media (max-width: 1000px) {
+  .up-ciclo { grid-template-columns: 1fr; gap: 28px; }
+  .up-ciclo__escalera { max-width: 340px; margin: 0 auto; }
+}
+@media (max-width: 640px) {
+  .up-ciclo__pasos { grid-template-columns: 1fr; }
+}
+
+/* --- Dato en cifras ------------------------------------------------------
+   El número es el protagonista (Laurentian Bold, como el «85 %» del Master
+   graphic D, p. 236) y el texto del DI lo explica al lado. --------------- */
+.up-cifras {
+  display: grid;
+  grid-template-columns: minmax(220px, 34%) 1fr;
+  gap: 36px;
+  align-items: center;
+  margin: 32px 0;
+  padding: 32px 36px;
+  background: var(--c-lino);
+  border-radius: var(--r-md);
+  border-left: 5px solid var(--c-dorado);
+}
+.up-cifras__datos { display: flex; flex-direction: column; gap: 22px; }
+.up-cifra__valor {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 3.6vw, 3rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--c-acento);
+}
+.up-cifra__label {
+  display: block;
+  margin-top: 8px;
+  font-size: .92rem;
+  line-height: 1.45;
+  color: var(--text-mut);
+}
+.up-cifras__tag {
+  display: block;
+  font-size: .7rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--c-dorado-tinta);
+  margin-bottom: 10px;
+}
+.up-cifras__texto p { margin: 0; }
+.up-fuente { margin-top: 12px !important; font-size: .86rem; color: var(--text-mut); }
+
+@media (max-width: 820px) {
+  .up-cifras { grid-template-columns: 1fr; gap: 24px; padding: 26px 24px; }
+  .up-cifras__datos { flex-direction: row; flex-wrap: wrap; gap: 28px; }
+}
+
+/* --- Diagrama a ancho completo (SVG inline) ------------------------------ */
+.up-diagrama {
+  margin: 40px 0;
+  padding: 30px 34px;
+  background: var(--bg-surface);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-sm);
+}
+.up-diagrama svg { width: 100%; height: auto; display: block; }
+.up-diagrama figcaption {
+  margin-top: 18px;
+  font-size: .9rem;
+  color: var(--text-mut);
+  line-height: 1.55;
+}
+.up-proporcion { width: 100%; max-width: 190px; height: auto; display: block; margin-bottom: 12px; }
+
+/* --- Anatomía · una pieza gráfica con su explicación al lado ------------- */
+.up-anatomia {
+  display: grid;
+  grid-template-columns: minmax(300px, 46%) 1fr;
+  gap: 44px;
+  align-items: center;
+  margin: 44px 0;
+}
+.up-anatomia svg { width: 100%; height: auto; display: block; }
+.up-nota + .up-nota { margin-top: 26px; }
+.up-nota__tag {
+  display: block;
+  font-size: .7rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--c-dorado-tinta);
+  margin-bottom: 8px;
+}
+.up-nota p { margin: 0; }
+@media (max-width: 900px) { .up-anatomia { grid-template-columns: 1fr; gap: 28px; } }
+
+/* --- Dato · el "Dato curioso" del DI, sin caja --------------------------- */
+.up-dato {
+  margin: 36px 0;
+  padding: 4px 0 4px 24px;
+  border-left: 2px solid color-mix(in srgb, var(--c-dorado) 60%, transparent);
+  max-width: 68ch;
+}
+.up-dato__tag {
+  display: block;
+  font-size: .7rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--c-dorado-tinta);
+  margin-bottom: 8px;
+}
+.up-dato p { margin: 0; }
+.up-dato .up-fuente { margin-top: 10px !important; }
+.ova-grid-2 > .up-dato { margin: 0; max-width: none; }
+.ova-grid-2 > .up-nota { margin: 8px 0; }
+
+/* --- Comparativo ligero · sin caja ------------------------------------- */
+.up-vs-ligero { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin: 40px 0; }
+.up-vs-ligero__col { position: relative; padding-left: 52px; }
+.up-vs-ligero__signo {
+  position: absolute; left: 0; top: -2px;
+  width: 36px; height: 36px; border-radius: var(--r-md);
+  display: grid; place-items: center;
+  font-size: 1.2rem; font-weight: 700;
+}
+.up-vs-ligero__col--si .up-vs-ligero__signo { background: color-mix(in srgb, var(--success) 16%, transparent); color: var(--success); }
+.up-vs-ligero__col--no .up-vs-ligero__signo { background: color-mix(in srgb, var(--danger) 14%, transparent); color: var(--danger); }
+.up-vs-ligero__tag {
+  display: block; font-size: .72rem; letter-spacing: .18em; text-transform: uppercase;
+  font-weight: 600; margin-bottom: 10px; color: var(--text-mut);
+}
+.up-vs-ligero p { margin: 0; }
+@media (max-width: 760px) { .up-vs-ligero { grid-template-columns: 1fr; gap: 28px; } }
+
+/* --- Caso a dos vías ----------------------------------------------------- */
+.up-caso { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 40px 0; }
+.up-caso__via {
+  display: flex; flex-direction: column;
+  padding: 28px 30px 26px;
+  background: var(--bg-surface);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-sm);
+  border-top: 4px solid var(--via);
+}
+.up-caso__via--error { --via: #C1444F; }
+.up-caso__via--ok    { --via: var(--c-acento); }
+.up-caso__tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: .72rem; letter-spacing: .18em; text-transform: uppercase;
+  font-weight: 600; color: var(--via); margin-bottom: 18px;
+}
+.up-caso__via--ok .up-caso__tag { color: var(--c-acento); }
+.up-caso__ilustracion { width: 100%; height: auto; display: block; margin-bottom: 20px; }
+.up-caso__texto { margin: 0 0 22px; font-family: var(--font-display); font-size: 1.12rem; }
+.up-caso__ruta {
+  margin-top: auto; padding-top: 18px;
+  border-top: 1px dashed var(--border-c);
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
+  font-size: .82rem;
+}
+.up-caso__paso {
+  padding: 6px 12px; border-radius: var(--r-sm);
+  background: var(--bg-muted); color: var(--text-pri);
+}
+.up-caso__paso--clave { background: var(--c-dorado-palido); color: var(--c-dorado-tinta); font-weight: 700; }
+.up-caso__paso--tarde { background: transparent; color: #C1444F; border: 1px dashed #E2A6AC; }
+.up-caso__flecha { color: var(--text-mut); opacity: .6; }
+.up-caso__pie {
+  grid-column: 1 / -1;
+  margin: 4px 0 0;
+  font-size: .9rem; color: var(--text-mut); line-height: 1.55;
+}
+@media (max-width: 860px) { .up-caso { grid-template-columns: 1fr; } }
+
+/* --- Respiro · banda de descanso -----------------------------------------
+   Una pantalla densa necesita un corte: un Franco Cuartel verde hondo a ancho
+   completo con una sola frase grande en Laurentian, la textura del wordmark
+   apenas insinuada y el Tahalí dorado a la derecha. Máximo uno por pantalla. */
+.up-respiro {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  margin: 72px calc(-1 * clamp(20px, 5vw, 64px));
+  padding: clamp(56px, 7vw, 84px) clamp(28px, 6vw, 88px);
+  background: var(--c-deep);
+  color: #FFFFFF;
+}
+.up-respiro::before {                      /* la textura del wordmark, tono sobre tono */
+  content: '';
+  position: absolute;
+  right: -6%; top: -30%;
+  width: 56%; aspect-ratio: 1;
+  background: #FFFFFF;
+  -webkit-mask: var(--up-textura) center / contain no-repeat;
+          mask: var(--up-textura) center / contain no-repeat;
+  opacity: .06;
+  pointer-events: none;
+  z-index: 0;
+}
+.up-respiro::after {                       /* el Tahalí dorado, a la derecha */
+  content: '';
+  position: absolute;
+  right: clamp(24px, 5vw, 72px); top: 0; bottom: 0;
+  width: clamp(44px, 5vw, 72px);
+  background: var(--up-tahali-dorado) center / 100% 100% no-repeat;
+  opacity: .95;
+  pointer-events: none;
+  z-index: 0;
+}
+.up-respiro p {
+  position: relative; z-index: 1;
+  margin: 0;
+  max-width: 900px;
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.7vw, 2.1rem);
+  line-height: 1.36;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  padding-right: clamp(60px, 12vw, 180px);
+}
+/* La regla de negrita del cuerpo (.ova-screen p strong) tiene más especificidad
+   que .up-respiro strong y pintaría el destacado en verde sobre verde: ilegible.
+   Se sube la especificidad para que gane el dorado claro. */
+.ova-screen .up-respiro strong,
+.up-respiro strong { font-weight: 700; color: var(--c-dorado-claro); }
+.ova-screen .up-respiro .up-destacado,
+.up-respiro .up-destacado { color: var(--c-dorado-claro); }
+
+/* --- Más aire entre las piezas de una pantalla densa --- */
+.up-diagrama, .up-caso, .up-cifras, .up-anatomia { margin-top: 56px; margin-bottom: 56px; }
+.up-vs-ligero { margin: 52px 0; }
+.up-quote { margin: 48px 0; }
+
+/* --- Cifras en fila · para tres o más datos ------------------------------ */
+.up-cifras--fila { grid-template-columns: 1fr; gap: 28px; }
+.up-cifras--fila .up-cifras__datos {
+  flex-direction: row;
+  gap: 40px;
+  padding-bottom: 26px;
+  border-bottom: 1px solid color-mix(in srgb, var(--c-dorado) 40%, transparent);
+}
+.up-cifras--fila .up-cifra { flex: 1; }
+@media (max-width: 720px) {
+  .up-cifras--fila .up-cifras__datos { flex-direction: column; gap: 22px; }
+}
+
+/* --- Aclaración · texto que el DI repite de un bloque cercano ------------ */
+.up-aclaracion {
+  display: block;
+  margin-top: 8px;
+  font-size: .9rem;
+  line-height: 1.5;
+  color: var(--text-mut);
+}
+
+/* --- Foto a ancho completo, recortada a franja --------------------------- */
+.up-foto-ancha { margin: 40px 0; }
+.up-foto-ancha img {
+  display: block;
+  width: 100%;
+  max-height: 340px;
+  object-fit: cover;
+  object-position: center 38%;
+  border-radius: var(--r-md);
+}
+.up-foto-ancha figcaption {
+  margin-top: 14px;
+  font-size: .88rem;
+  color: var(--text-mut);
+  line-height: 1.55;
+}
+
+/* =========================================================
+   MOVIMIENTO
+   ---------------------------------------------------------
+   En un curso el movimiento acompaña; no compite con la
+   lectura: nada se mueve donde hay texto que leer.
+   ========================================================= */
+
+/* La escalera del ciclo se arma al entrar en la pantalla, un peldaño tras
+   otro: el componente explica su propio orden. Solo una vez. */
+@keyframes up-peldano { from { transform: translateY(18px); opacity: 0; } to { transform: none; opacity: 1; } }
+.up-ciclo__escalera .up-peldano {
+  transform-box: fill-box;
+  animation: up-peldano .6s cubic-bezier(.4,0,.2,1) both;
+}
+.up-ciclo__escalera .up-peldano:nth-of-type(1) { animation-delay: .10s; }
+.up-ciclo__escalera .up-peldano:nth-of-type(2) { animation-delay: .26s; }
+.up-ciclo__escalera .up-peldano:nth-of-type(3) { animation-delay: .42s; }
+.up-ciclo__escalera .up-peldano:nth-of-type(4) { animation-delay: .58s; }
+
+/* --- Accesibilidad -------------------------------------------------------
+   Obligatorio: quien pide menos movimiento no ve ninguno. El motor no
+   contempla `prefers-reduced-motion` —su reveal se aplica siempre—, así que
+   aquí se neutraliza también. --------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .up-ciclo__escalera .up-peldano { animation: none !important; opacity: 1; transform: none; }
+  html { scroll-behavior: auto; }
+  [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; }
+}
+
+/* =========================================================
+   MÓVIL
+   ---------------------------------------------------------
+   Regla: en una pantalla estrecha, una imagen o se ve a un
+   tamaño legible o no se ve. Nunca "a escala hormiga".
+   ========================================================= */
+
+/* --- Diagramas anchos: se deslizan, no se encogen ------------------------ */
+@media (max-width: 860px) {
+  .up-diagrama {
+    padding: 22px 0 22px 20px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+  }
+  .up-diagrama svg { min-width: 620px; }
+  .up-diagrama figcaption {
+    position: sticky; left: 0;
+    padding-right: 20px;
+    max-width: 100%;
+  }
+  .up-diagrama::after {
+    content: '';
+    position: sticky; left: 100%; top: 0;
+    display: block; width: 28px; height: 100%;
+    background: linear-gradient(to left, var(--bg-surface), transparent);
+    pointer-events: none;
+  }
+}
+
+/* --- Fotos y piezas: alturas y aire proporcionados a la pantalla --- */
+@media (max-width: 720px) {
+  .up-foto-ancha img { max-height: 220px; }
+  .up-ilustracion { margin: 28px 0; }
+  .up-anatomia svg { max-width: 340px; margin: 0 auto; }
+  .up-cifras, .up-caso, .up-diagrama, .up-anatomia { margin-top: 40px; margin-bottom: 40px; }
+  .up-respiro { margin: 48px calc(-1 * clamp(20px, 5vw, 64px)); }
+  .up-respiro::after { width: 32px; right: 16px; }
+  .up-respiro p { padding-right: 48px; }
+  .up-escena__num { font-size: 2.6rem; }
+}
+
+/* =========================================================
+   AJUSTES HEREDADOS DEL RED DE SCALA (revisión 2026-08-31)
+   ========================================================= */
+
+/* 1 · Contraste del botón "Siguiente" -------------------------------------
+   El motor pinta el rótulo con --c-acento sobre el fondo del sidebar: el verde
+   sobre el verde hondo queda en 1,4:1 y la palabra SIGUIENTE desaparece.
+   Pasa al dorado claro (4,8:1 sobre verde). */
+.ova-screen-nav__btn--next small { color: var(--c-dorado-claro); }
+
+/* 2 · Jerarquía del menú --------------------------------------------------- */
+.ova-sidebar__menu-item[data-nivel="2"] {
+  margin-left: 29px;
+  border-left: 2px solid rgba(255,255,255,.16);
+  border-radius: 0 var(--r-md) var(--r-md) 0;
+}
+.ova-sidebar__menu-item[data-nivel="2"]::after { display: none; }
+.ova-sidebar__menu-item[data-nivel="2"] .title { font-size: .92em; opacity: .82; }
+.ova-sidebar__menu-item[data-nivel="2"] .num { opacity: .6; transform: scale(.9); }
+[data-version="clara"] .ova-sidebar__menu-item[data-nivel="2"] { border-left-color: rgba(10,64,57,.16); }
+[data-sidebar-collapsed="true"] .ova-sidebar__menu-item[data-nivel="2"] { margin-left: 0; border-left: 0; }
+
+/* 3 · Menú sin iconos ------------------------------------------------------ */
+.ova-sidebar__menu-item { grid-template-columns: 32px 1fr; }
+.ova-sidebar__menu-item .num--icono iconify-icon { font-size: 1.05rem; color: inherit; }
+.ova-sidebar__menu-item.is-active .num--icono iconify-icon { color: #fff; }
+.ova-sidebar__menu-item[data-tipo="grupo"] { grid-template-columns: 1fr; }
+.ova-sidebar__menu-item[data-tipo="grupo"] .num--vacio { display: none; }
+.ova-sidebar__menu-item.is-padre-activo { color: var(--sb-text); }
+[data-sidebar-collapsed="true"] .ova-sidebar__menu-item .num { display: grid !important; place-items: center; }
+/* el número del menú, en la serif de la marca */
+.ova-sidebar__menu-item .num { font-family: var(--font-display); font-weight: 600; }
+
+/* 4 · Referencias ------------------------------------------------------------
+   Estilo de la línea (ronda de Scala sobre la Unidad 3, 2026-10-02): alineadas
+   a la izquierda sin sangría francesa, autor y año SIN negrilla, el título de
+   la obra en cursiva (<em>, como pide APA) y la URL como texto, sin
+   hipervínculo (`span.up-ref__url`). */
+.up-referencias p {
+  padding-left: 0; text-indent: 0;
+  margin: 0 0 20px; line-height: 1.65;
+  max-width: 78ch;
+}
+.up-referencias p::before {
+  content: '';
+  display: inline-block;
+  width: 7px; height: 7px;
+  background: color-mix(in srgb, var(--c-dorado) 80%, transparent);
+  margin-right: 12px;
+  vertical-align: .12em;
+}
+.up-referencias em { font-style: italic; }
+.up-ref__url { overflow-wrap: anywhere; color: var(--text-pri); }
+
+/* 5 · Evaluación · alineada a la izquierda como el resto del curso --------- */
+.up-eval__cuerpo { text-align: left; max-width: 74ch; }
+.up-eval__cuerpo h2 { margin: 0 0 14px; }
+.ova-quiz__question { font-size: 1.3rem; font-weight: 600; color: var(--text-head); margin: 0 0 18px; }
+.ova-quiz__feedback {
+  text-align: left;
+  margin-top: 28px;
+  padding: 18px 22px 20px;
+  background: color-mix(in srgb, var(--success) 9%, var(--bg-surface));
+  border-left-width: 4px;
+}
+.ova-quiz__feedback::before {
+  content: 'Retroalimentación';
+  display: block;
+  font-size: .68rem; letter-spacing: .18em; text-transform: uppercase;
+  font-weight: 700; color: var(--success);
+  margin-bottom: 10px;
+}
+.ova-quiz__feedback.is-wrong { background: color-mix(in srgb, var(--danger) 8%, var(--bg-surface)); }
+.ova-quiz__feedback.is-wrong::before { color: var(--danger); }
+
+/* La carita de marca: ojos en verde y la boca en dorado (sonríe al acertar,
+   se invierte al fallar). Entra con un pop. */
+.ova-quiz__feedback { position: relative; padding-right: 84px; }
+.ova-quiz__feedback::after {
+  content: '';
+  position: absolute;
+  top: 14px; right: 18px;
+  width: 46px; height: 46px;
+  background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='32' cy='36' r='8' fill='%230F5C51'/><circle cx='68' cy='36' r='8' fill='%230F5C51'/><path d='M26 60 Q50 86 74 60' fill='none' stroke='%23B9975B' stroke-width='13' stroke-linecap='round'/></svg>") center / contain no-repeat;
+  animation: upCaraPop .5s cubic-bezier(.34,1.56,.64,1);
+}
+.ova-quiz__feedback.is-wrong::after {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='32' cy='40' r='8' fill='%230F5C51'/><circle cx='68' cy='40' r='8' fill='%230F5C51'/><path d='M26 78 Q50 54 74 78' fill='none' stroke='%23B9975B' stroke-width='13' stroke-linecap='round'/></svg>");
+}
+@keyframes upCaraPop {
+  from { transform: scale(.3) rotate(-40deg); opacity: 0; }
+  to   { transform: scale(1) rotate(0); opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) { .ova-quiz__feedback::after { animation: none; } }
+@media (max-width: 500px) {
+  .ova-quiz__feedback { padding-right: 64px; }
+  .ova-quiz__feedback::after { width: 36px; height: 36px; right: 14px; }
+}
+
+/* 6 · Temario · la estructura de la unidad antes de entrar -------------- */
+.up-temario { display: flex; flex-direction: column; gap: 14px; margin: 36px 0; }
+.up-bloque {
+  background: var(--bg-surface);
+  border: 1px solid var(--borde, var(--border-c));
+  border-left: 4px solid var(--tono, var(--c-acento));
+  border-radius: var(--r-md);
+  padding: 22px 26px;
+}
+.up-bloque__tag {
+  display: block; font-size: .7rem; letter-spacing: .18em; text-transform: uppercase;
+  font-weight: 700; color: var(--tono, var(--c-acento)); margin-bottom: 12px;
+}
+.up-bloque ol { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 9px; }
+.up-bloque li { display: flex; gap: 12px; align-items: baseline; font-size: .99rem; }
+.up-bloque li .n {
+  font-family: var(--font-display);
+  font-size: .86rem; font-weight: 700; color: var(--text-mut);
+  min-width: 22px; font-variant-numeric: tabular-nums;
+}
+.up-bloque li .t { display: inline-block; }
+.up-bloque li.sub { font-size: .93rem; color: var(--text-mut); }
+.up-bloque li.sub .t { position: relative; padding-left: 26px; }
+.up-bloque li.sub .t::before {
+  content: ''; position: absolute; left: 4px; top: .62em;
+  width: 13px; height: 1px; background: currentColor; opacity: .4;
+}
+.up-bloque li em { font-style: normal; color: var(--text-mut); font-size: .88rem; }
+
+.up-descarga {
+  display: flex; align-items: center; gap: 18px; flex-wrap: wrap;
+  background: var(--c-lino); border-radius: var(--r-md);
+  border-left: 5px solid var(--c-dorado);
+  padding: 24px 28px; margin: 36px 0;
+}
+.up-descarga__info { flex: 1; min-width: 220px; }
+.up-descarga__info b { display: block; font-size: 1.05rem; color: var(--text-head); }
+.up-descarga__info span { font-size: .9rem; color: var(--text-mut); }
+
+/* 7 · Temario · marca por icono en las secciones estructurales -------------- */
+.up-bloque__tag { display: inline-flex; align-items: center; gap: 8px; }
+.up-bloque__tag iconify-icon { font-size: 1.1rem; }
+.up-bloque li .n--icono { color: var(--c-acento); }
+.up-bloque li .n--icono iconify-icon { font-size: 1.05rem; }
+
+/* 9 · Índice navegable ---------------------------------------------------- */
+.up-bloque li { padding: 0; }
+.up-fila {
+  display: flex; align-items: baseline; gap: 12px;
+  padding: 7px 10px 7px 8px;
+  margin-left: -8px;
+  border-radius: var(--r-sm);
+  text-decoration: none;
+  color: inherit;
+  transition: background .16s ease, color .16s ease;
+}
+.up-fila:hover, .up-fila:focus-visible {
+  background: color-mix(in srgb, var(--c-acento) 7%, transparent);
+  color: var(--text-head);
+}
+.up-fila:focus-visible { outline: 2px solid var(--c-acento); outline-offset: 2px; }
+.up-fila__ir {
+  margin-left: auto;
+  color: var(--c-acento);
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity .16s ease, transform .16s ease;
+}
+.up-fila:hover .up-fila__ir,
+.up-fila:focus-visible .up-fila__ir { opacity: 1; transform: translateX(0); }
+@media (hover: none) { .up-fila__ir { opacity: .45; transform: none; } }
+
+a.up-bloque__tag--link { text-decoration: none; color: var(--c-acento); }
+a.up-bloque__tag--link:hover .up-fila__ir,
+a.up-bloque__tag--link:focus-visible .up-fila__ir { opacity: 1; transform: translateX(0); }
+a.up-bloque__tag--link .up-fila__ir { margin-left: 6px; }
+a.up-bloque__tag--link:focus-visible { outline: 2px solid var(--c-acento); outline-offset: 2px; border-radius: 4px; }
+
+/* 10 · Sección interna de un tema ------------------------------------------
+   Los subtemas viven dentro de la página de su tema. El encabezado marca el
+   corte sin pretender ser otra pantalla. */
+.up-seccion {
+  margin: 84px 0 36px;
+  padding-top: 44px;
+  border-top: 1px solid var(--border-c);
+}
+/* La viñeta de sección: el Tahalí dorado en miniatura. Sustituye a la
+   numeración interna (1.1, 2.1…): todas las secciones se marcan igual. */
+.up-seccion__titulo {
+  position: relative;
+  padding-left: 32px;
+  font-weight: 600;
+  margin: 0 0 10px;
+  font-size: clamp(1.6rem, 2.7vw, 2.2rem);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  color: var(--text-head);
+}
+.up-seccion__titulo::before {
+  content: '';
+  position: absolute;
+  left: 0; top: .22em;
+  width: 16px; height: 22px;
+  background: var(--up-tahali-dorado) center / 100% 100% no-repeat;
+}
+.up-seccion__lead {
+  padding-left: 32px;
+  margin: 0;
+  font-weight: 300;
+  font-size: 1.14rem;
+  color: color-mix(in srgb, var(--text-pri) 88%, transparent);
+  max-width: 68ch;
+}
+
+/* 11 · Sub-ítems de sección en el menú ------------------------------------- */
+.ova-sidebar__menu-item[data-tipo="seccion"] { grid-template-columns: 1fr; }
+.ova-sidebar__menu-item[data-tipo="seccion"] .num { display: none; }
+[data-sidebar-collapsed="true"] .ova-sidebar__menu-item[data-tipo="seccion"] { display: none !important; }
+.up-seccion { scroll-margin-top: calc(var(--topbar-h) + 18px); }
+
+/* 12 · Evaluación · bienvenida con jerarquía -------------------------------- */
+.ova-evalquiz__nav {
+  position: static;
+  transform: none;
+  width: 100%;
+  max-width: 74ch;
+  margin: 20px 0 0;
+  align-items: center;
+  gap: 18px;
+  padding: 10px 10px 10px 20px;
+}
+.ova-evalquiz__nav .ova-evalquiz__progress-bar {
+  flex: 1;
+  height: 6px;
+  margin-bottom: 0;
+  min-width: 80px;
+}
+.ova-evalquiz__nav .ova-evalquiz__counter {
+  white-space: nowrap;
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.ova-evalquiz__btn--prev { padding: 12px 14px; }
+@media (max-width: 720px) {
+  .ova-evalquiz__nav { gap: 12px; padding-left: 14px; }
+  .ova-evalquiz__nav .ova-evalquiz__progress-bar { min-width: 48px; }
+  .ova-evalquiz__nav .ova-evalquiz__btn { flex: 0 0 auto; }
+}
+
+.up-eval__tema {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: .68rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--c-dorado-tinta);
+  margin: 0 0 16px;
+}
+.up-eval__contexto { margin: 0 0 18px; max-width: 66ch; }
+
+.up-eval__lead {
+  font-size: 1.18rem;
+  font-weight: 300;
+  line-height: 1.6;
+  max-width: 56ch;
+  margin: 6px 0 34px;
+}
+.up-eval__datos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  max-width: 640px;
+  margin-bottom: 38px;
+}
+.up-eval__dato {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-c);
+  border-top: 3px solid var(--c-dorado);
+  border-radius: var(--r-md);
+  padding: 18px 20px;
+  display: flex; flex-direction: column; gap: 6px;
+}
+.up-eval__dato .v {
+  font-family: var(--font-display);
+  font-size: 2.1rem; font-weight: 700; line-height: 1;
+  color: var(--c-acento);
+}
+.up-eval__dato .v iconify-icon { font-size: 1.7rem; }
+.up-eval__dato .l { font-size: .86rem; color: var(--text-mut); line-height: 1.4; }
+.up-eval__ayuda { margin: 14px 0 0; font-size: .88rem; color: var(--text-mut); }
+@media (max-width: 720px) { .up-eval__datos { grid-template-columns: 1fr; } }
+
+/* 13 · Glosario · diccionario editorial --------------------------------------
+   La inicial fantasma en Laurentian marca el ritmo alfabético (solo aparece
+   cuando cambia la letra, como en un diccionario); un Tahalí dorado en
+   miniatura la acompaña. */
+.up-glosario { margin: 8px 0 0; max-width: 74ch; }
+.up-glosario__entrada {
+  display: grid;
+  grid-template-columns: 76px 1fr;
+  gap: 0 20px;
+  padding: 26px 0;
+  border-top: 1px solid var(--border-c);
+}
+.up-glosario__entrada:first-child { border-top: none; padding-top: 10px; }
+.up-glosario__entrada--cont { border-top-color: transparent; padding-top: 0; margin-top: -6px; }
+.up-glosario__letra {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 2.8rem;
+  line-height: 1;
+  text-align: right;
+  color: color-mix(in srgb, var(--c-acento) 38%, transparent);
+  position: relative;
+}
+.up-glosario__entrada:not(.up-glosario__entrada--cont) .up-glosario__letra::after {
+  content: '';
+  position: absolute;
+  right: 2px; top: calc(1em + 10px);
+  width: 10px; height: 14px;
+  background: var(--up-tahali-dorado) center / 100% 100% no-repeat;
+}
+.up-glosario dt {
+  font-family: var(--font-display);
+  font-size: 1.22rem;
+  font-weight: 600;
+  color: var(--text-head);
+}
+.up-glosario dd { margin: 10px 0 0; max-width: 62ch; }
+@media (max-width: 600px) {
+  .up-glosario__entrada { grid-template-columns: 44px 1fr; gap: 0 14px; }
+  .up-glosario__letra { font-size: 2rem; }
+  .up-glosario__entrada:not(.up-glosario__entrada--cont) .up-glosario__letra::after { width: 8px; height: 11px; }
+}
+
+/* 14 · Términos del glosario en el texto ------------------------------------- */
+.up-termino {
+  text-decoration: underline dotted;
+  text-decoration-color: color-mix(in srgb, var(--c-acento) 55%, transparent);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+  cursor: help;
+  position: relative;
+}
+.up-termino:hover,
+.up-termino:focus-visible { text-decoration-color: var(--c-acento); outline: none; }
+.up-termino::after {
+  content: attr(data-def);
+  position: absolute;
+  left: 0; bottom: calc(100% + 10px);
+  width: max-content;
+  max-width: min(38ch, 70vw);
+  background: var(--c-deep);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: .88rem; line-height: 1.5;
+  font-weight: 400; font-style: normal;
+  text-align: left;
+  padding: 12px 16px;
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-md);
+  opacity: 0; visibility: hidden; transform: translateY(4px);
+  transition: opacity .18s ease, transform .18s ease, visibility .18s;
+  pointer-events: none;
+  z-index: 60;
+}
+.up-termino::before {
+  content: '';
+  position: absolute;
+  left: 14px; bottom: calc(100% + 4px);
+  border: 6px solid transparent;
+  border-top-color: var(--c-deep);
+  opacity: 0; visibility: hidden;
+  transition: opacity .18s ease, visibility .18s;
+  z-index: 60;
+}
+.up-termino:hover::after,  .up-termino:focus-visible::after,
+.up-termino:hover::before, .up-termino:focus-visible::before {
+  opacity: 1; visibility: visible; transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .up-termino::after { transition: none; transform: none; }
+  .up-termino::before { transition: none; }
+}
+.ova-infografia__paso:has(.up-termino) { overflow: visible; }
+
+/* --- Pódcast de la unidad · la barra de progreso se puede tocar ---------- */
+[data-up-audio] .ova-audio__progress { cursor: pointer; height: 6px; }
+[data-up-audio] .ova-audio__play:focus-visible { outline: 3px solid var(--c-dorado-claro); outline-offset: 3px; }
+
+/* =========================================================
+   RITMO VERTICAL Y HUECOS · 2026-09-29
+   ========================================================= */
+
+/* 1 · Aire alrededor de los componentes ----------------------------------- */
+.ova-screen > :is(
+  .ova-callout, .ova-acordeon, .ova-carrusel, .ova-tabs, .ova-stepper, .ova-tabla,
+  .ova-vs, .ova-infografia, .ova-timeline, .ova-timeline-h, .ova-grid-2, .ova-quiz,
+  .up-cifras, .up-nota, .up-caso, .up-diagrama, .up-anatomia, .up-escenas,
+  .up-tabla-apa, .up-pendiente
+) {
+  margin-block: 40px;
+}
+.ova-screen__head + * { margin-top: 0; }
+
+/* 2 · Hueco de una imagen que no ha llegado ------------------------------- */
+.up-pendiente {
+  display: grid;
+  gap: 14px;
+  place-items: center;
+  text-align: center;
+  padding: 44px 28px;
+  border-radius: var(--r-md);
+  background: color-mix(in srgb, var(--text-mut) 10%, var(--bg-surface));
+  border: 1px dashed color-mix(in srgb, var(--text-mut) 45%, transparent);
+  color: var(--text-mut);
+}
+.up-pendiente__marco {
+  width: 96px; height: 72px;
+  display: grid; place-items: center;
+  border-radius: var(--r-md);
+  background: color-mix(in srgb, var(--text-mut) 16%, transparent);
+}
+.up-pendiente__marco iconify-icon { font-size: 2.2rem; color: color-mix(in srgb, var(--text-mut) 70%, transparent); }
+.up-pendiente__tag {
+  font-family: var(--font-body);
+  font-size: 0.74rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+}
+.up-pendiente__desc { margin: 0; max-width: 62ch; font-size: 0.9rem; line-height: 1.6; }
+.up-pendiente + figcaption { font-size: 0.85rem; color: var(--text-mut); margin-top: 10px; }
+
+/* En portada el hueco ocupa la mitad de la foto, a la derecha del fundido
+   (.up-portada__foto, la portada con foto de §2) */
+.up-portada__foto .up-pendiente {
+  position: absolute; inset: 0 0 0 30%;
+  border-radius: 0;
+  background: color-mix(in srgb, #ffffff 10%, transparent);
+  border-color: color-mix(in srgb, #ffffff 40%, transparent);
+  color: color-mix(in srgb, #ffffff 82%, transparent);
+  padding: 32px;
+  align-content: center;
+}
+.up-portada__foto .up-pendiente__marco { background: color-mix(in srgb, #ffffff 16%, transparent); }
+.up-portada__foto .up-pendiente__marco iconify-icon { color: color-mix(in srgb, #ffffff 80%, transparent); }
+@media (max-width: 900px) { .up-portada__foto .up-pendiente { inset: 0; } }
+
+/* 3 · Hueco de un texto que no ha llegado --------------------------------- */
+.up-pendiente--texto {
+  place-items: start;
+  text-align: left;
+  padding: 26px 28px;
+  gap: 12px;
+}
+.up-pendiente__lineas {
+  display: grid;
+  gap: 9px;
+  width: 100%;
+  max-width: 62ch;
+}
+.up-pendiente__lineas span {
+  height: 9px;
+  border-radius: 2px;
+  background: color-mix(in srgb, var(--text-mut) 22%, transparent);
+}
+.up-pendiente__lineas span:nth-child(2) { width: 92%; }
+.up-pendiente__lineas span:nth-child(3) { width: 64%; }
+
+/* 4 · Rótulo de un bloque ------------------------------------------------ */
+.up-rotulo {
+  margin: 40px 0 0;
+  font-family: var(--font-display);
+  font-size: 1.24rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--text-head);
+}
+.ova-screen > .up-rotulo + * { margin-top: 14px; }
+
+/* 5 · Temario · lo que el índice del DI declara pendiente ------------------ */
+.up-temario--pendiente { margin-top: 0; }
+.up-temario--pendiente .up-bloque {
+  background: transparent;
+  border-style: dashed;
+  border-left-color: color-mix(in srgb, var(--text-mut) 45%, transparent);
+  color: var(--text-mut);
+}
+.up-temario--pendiente .up-bloque__tag { color: var(--text-mut); }
+.up-temario--pendiente .up-bloque li { padding-left: 14px; }
+.up-temario--pendiente .up-bloque li .n--icono { color: var(--text-mut); }
+
+/* =========================================================
+   ADN POSGRADOS PANAMERICANA · componentes y ajustes propios
+   ========================================================= */
+
+/* 1 · Comparativo: neutro por defecto, error/ok por variante ---------------
+   El color lo decide el NOMBRE del componente que escribe el DI:
+     «Comparativo»           → .ova-vs                     las dos neutras
+     «Comparativo error/ok»  → .ova-vs.up-vs--error-ok      la 1.ª error, la 2.ª correcta
+   Nada de estilos en línea en las etiquetas: el glifo lo pone la variante. */
+.ova-vs__card { border-top-color: var(--c-acento); }
+.ova-vs__card--alt { border-top-color: var(--c-dorado); }
+.ova-vs__card-tag { font-weight: 700; letter-spacing: .14em; }
+.ova-vs__divider {
+  font-family: var(--font-display);
+  font-weight: 700;
+  background: var(--c-deep);
+  color: var(--c-dorado-claro);
+  border-radius: var(--r-md);
+}
+.up-vs--error-ok > .ova-vs__card:first-child { border-top-color: var(--danger); }
+.up-vs--error-ok > .ova-vs__card--alt        { border-top-color: var(--success); }
+.up-vs--error-ok > .ova-vs__card:first-child .ova-vs__card-tag {
+  background: color-mix(in srgb, var(--danger) 12%, transparent); color: var(--danger);
+}
+.up-vs--error-ok > .ova-vs__card--alt .ova-vs__card-tag {
+  background: color-mix(in srgb, var(--success) 12%, transparent); color: var(--success);
+}
+.up-vs--error-ok > .ova-vs__card:first-child .ova-vs__card-tag::before { content: '✕  '; }
+.up-vs--error-ok > .ova-vs__card--alt .ova-vs__card-tag::before        { content: '✓  '; }
+
+/* 2 · Fotografía con el marco de la línea gráfica --------------------------
+   Master graphic B (p. 224): la foto es el Franco Cuartel y el Tahalí la
+   cruza. Aquí el Tahalí entra por la esquina inferior izquierda en verde con
+   multiply (variante que el manual permite sobre fotografía, p. 232): tiñe la
+   foto sin taparla y nunca cae sobre un rostro centrado. Alto fijo para que
+   el recurso caiga siempre sobre la foto, no sobre el pie. */
+.up-foto-ancha { position: relative; margin: 56px 0; }
+.up-foto-ancha img {
+  height: 340px; max-height: none;
+  border-radius: var(--r-md);
+}
+.up-foto-ancha::after {
+  content: '';
+  position: absolute;
+  left: 4%; top: 0;
+  width: 22%; height: 340px;
+  background: var(--up-tahali-verde) center / 100% 100% no-repeat;
+  mix-blend-mode: multiply;
+  opacity: .92;
+  pointer-events: none;
+}
+.up-foto-ancha figcaption { margin-top: 18px; padding-left: 4px; }
+@media (max-width: 720px) {
+  .up-foto-ancha img { height: 220px; }
+  .up-foto-ancha::after { height: 220px; }
+}
+
+/* 3 · Ilustración explicativa · esquina de marca ----------------------------
+   La ilustración de apertura lleva el mismo guiño que las fotos, en pequeño:
+   un Tahalí dorado en la esquina inferior derecha. */
+.up-ilustracion { position: relative; overflow: visible; }
+.up-ilustracion img { border-radius: var(--r-md); }
+.up-ilustracion::after {
+  content: '';
+  position: absolute;
+  right: 18px; bottom: -12px;
+  width: 26px; height: 40px;
+  background: var(--up-tahali-dorado) center / 100% 100% no-repeat;
+  pointer-events: none;
+}
+.up-ilustracion:has(figcaption)::after { bottom: auto; top: calc(100% - 64px); }
+
+/* 4 · Botones con la forma del sistema -----------------------------------------
+   Rectangulares (el sistema no tiene curvas), verde sólido; al pasar el mouse
+   se oscurecen (verde + 15 % negro, p. 127). Sin gradiente ni brillo del motor. */
+.ova-btn { border-radius: var(--r-md); font-family: var(--font-body); font-weight: 600; letter-spacing: .02em; }
+.ova-btn--primary { background: var(--c-acento); color: #fff; box-shadow: 0 1px 2px rgba(10,64,57,.18); }
+.ova-btn--primary:hover {
+  background: var(--c-verde-hover); color: #fff;
+  box-shadow: 0 6px 18px rgba(10,64,57,.22);
+}
+.ova-btn:disabled, .ova-btn[aria-disabled="true"] { background: #6B716E; color: #fff; box-shadow: none; opacity: .8; }
+[data-version="oscura"] .ova-btn--primary { box-shadow: none !important; }
+.ova-evalquiz__btn--primary { background: var(--c-acento); }
+.ova-screen-nav__btn--next .ico { background: var(--c-acento); }
+.ova-sidebar__menu-item.is-active .num { background: var(--c-acento); }
+.ova-callout .ova-callout__ico { background: var(--c-acento); box-shadow: none; border-radius: var(--r-md); }
+
+/* 5 · Foco visible en todo control ---------------------------------------------
+   Base de accesibilidad (WCAG 2.2 AA, 2.4.7 y 2.4.11): quien navega con
+   teclado ve siempre dónde está. Anillo verde con halo blanco sobre claro;
+   dorado claro sobre el verde hondo. */
+:where(a, button, [tabindex], summary, input, select, textarea, iconify-icon[role="button"]):focus-visible {
+  outline: 3px solid var(--c-acento);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 5px #fff;
+  border-radius: var(--r-sm);
+}
+.ova-sidebar :where(a, button):focus-visible,
+.up-respiro :where(a, button):focus-visible { outline-color: var(--c-dorado-claro); box-shadow: none; }
+
+/* 6 · El marcador de página -----------------------------------------------------
+   El manual pone un Tahalí dorado en la esquina de cada página. En el curso
+   queda como un velo grande y apenas visible en la cabecera de cada pantalla. */
+.ova-screen__head { position: relative; }
+.ova-screen__head::after {
+  content: '';
+  position: absolute;
+  right: 0; top: calc(-1 * clamp(28px, 5vw, 64px));
+  width: clamp(80px, 9vw, 130px); height: calc(100% + clamp(28px, 5vw, 64px));
+  background: var(--up-tahali-dorado) center / 100% 100% no-repeat;
+  opacity: .08;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* 7 · Callouts más luminosos ------------------------------------------------
+   El tinte del motor (acento al 12 %) sobre el verde queda gris. Se tiñe con el
+   verde claro del Tahalí, más luminoso. «Para reflexionar» conserva su dorado. */
+.ova-callout:not(.ova-callout--reflexion) {
+  background: color-mix(in srgb, var(--c-info) 8%, var(--bg-surface));
+}
+
+/* 8 · Estado «visitado» del menú en dorado ------------------------------------
+   El motor marca lo visitado en verde (éxito), que aquí es el color de marca.
+   Pasa al dorado: lo que se logra. Dorado claro sobre verde hondo (4,8:1);
+   tinta dorada en el tema claro (6,2:1). */
+.ova-sidebar__menu-item.is-done .num {
+  background: color-mix(in srgb, var(--c-dorado) 22%, transparent);
+  border-color: color-mix(in srgb, var(--c-dorado) 55%, transparent);
+  color: var(--c-dorado-claro);
+}
+[data-version="clara"] .ova-sidebar__menu-item.is-done .num { color: var(--c-dorado-tinta); }
+
+/* 9 · Infografía y acordeón: números y títulos en la serif ---------------------- */
+.ova-infografia__num { font-family: var(--font-display); font-weight: 700; }
+.ova-step__num { font-family: var(--font-display); }
+.ova-acordeon__title { font-size: 1.12rem; }
+
+/* 10 · Foto a franja que no ha llegado ---------------------------------------
+   El hueco ocupa el sitio exacto de la foto (misma altura) y el Tahalí se
+   dibuja igual: cuando llegue la imagen, solo cambia el <div> por el <img>. */
+.up-foto-ancha .up-pendiente { height: 340px; border-radius: var(--r-md); }
+@media (max-width: 720px) { .up-foto-ancha .up-pendiente { height: 220px; padding: 24px 18px; } }
+.up-foto-ancha .up-pendiente__desc { font-size: .86rem; }
