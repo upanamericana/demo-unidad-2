@@ -97,7 +97,9 @@ const menu = cfg.menu.map((m, i) => {
 
 /* Temario · se genera desde el menú, no se escribe a mano: así no puede
    desalinearse cuando se inserta o se mueve una pantalla. Agrupa por
-   `bloque` y respeta la numeración jerárquica. */
+   `bloque` y respeta la numeración jerárquica. Las clases son del motor
+   (`ova-bloque`, `ova-fila`); cada skin les da estilo dentro de su
+   contenedor de temario. */
 function generarTemario(menu) {
   /* Replica la estructura del menú: el contenido temático se numera y las
      secciones estructurales se reconocen por su icono. */
@@ -156,7 +158,7 @@ function generarTemario(menu) {
         : (m.icon ? `<span class="n n--icono"><iconify-icon icon="${m.icon}"></iconify-icon></span>` : '');
       const sub  = m.tipo === 'subtema' ? ' class="sub"' : '';
       const nota = m.nota ? ` <em>· ${m.nota}</em>` : '';
-      return `            <li${sub}><a class="sl-fila" href="${m.file}">${marca}<span class="t">${m.titulo}${nota}</span><span class="sl-fila__ir" aria-hidden="true">→</span></a></li>`;
+      return `            <li${sub}><a class="ova-fila" href="${m.file}">${marca}<span class="t">${m.titulo}${nota}</span><span class="ova-fila__ir" aria-hidden="true">→</span></a></li>`;
     }).join('\n');
     const tag = b.icon
       ? `<iconify-icon icon="${b.icon}"></iconify-icon> ${b.titulo}`
@@ -164,13 +166,13 @@ function generarTemario(menu) {
     // El título del bloque de un tema lleva a la pantalla del tema:
     // sin esto, esa pantalla no sería alcanzable desde el índice.
     const cab = b.href
-      ? `<a class="sl-bloque__tag sl-bloque__tag--link" href="${b.href}">${tag}<span class="sl-fila__ir" aria-hidden="true">→</span></a>`
-      : `<span class="sl-bloque__tag">${tag}</span>`;
+      ? `<a class="ova-bloque__tag ova-bloque__tag--link" href="${b.href}">${tag}<span class="ova-fila__ir" aria-hidden="true">→</span></a>`
+      : `<span class="ova-bloque__tag">${tag}</span>`;
     const lista = b.items.length ? `
           <ol>
 ${items}
           </ol>` : '';
-    return `        <div class="sl-bloque">
+    return `        <div class="ova-bloque">
           ${cab}${lista}
         </div>`;
   }).join('\n');
