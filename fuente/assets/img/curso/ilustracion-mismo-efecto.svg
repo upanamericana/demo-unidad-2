@@ -8,8 +8,8 @@
   <defs>
     <linearGradient id="ilu-mismoefecto-fondo" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%"   stop-color="#E4EEEB"/>
-      <stop offset="55%"  stop-color="#EFEBE2"/>
-      <stop offset="100%" stop-color="#F7F4EE"/>
+      <stop offset="55%"  stop-color="#ECF1EF"/>
+      <stop offset="100%" stop-color="#F6F8F7"/>
     </linearGradient>
     <filter id="ilu-mismoefecto-sombra" x="-30%" y="-30%" width="160%" height="160%">
       <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#0A4039" flood-opacity="0.16"/>
@@ -66,7 +66,7 @@
     <rect x="898" y="212" width="170" height="7" rx="3.5" fill="#0A4039" opacity=".12"/>
   </g>
   <g transform="rotate(2 1014 230)">
-    <rect x="896" y="190" width="236" height="80" rx="5" fill="#F7F4EE"/>
+    <rect x="896" y="190" width="236" height="80" rx="5" fill="#F6F8F7"/>
     <rect x="918" y="208" width="96" height="7" rx="3.5" fill="#0A4039" opacity=".14"/>
     <rect x="918" y="224" width="150" height="7" rx="3.5" fill="#0A4039" opacity=".1"/>
   </g>
@@ -80,9 +80,10 @@
 
   <!-- ══ Las dos flechas se funden en una y caen en la caja (la de la correcta pasa por encima de la otra hoja) ══ -->
   <g fill="none" stroke="#0F5C51" stroke-width="3" stroke-linecap="round" opacity=".5">
-    <path d="M322 100 C 360 0, 880 0, 946 192" stroke-dasharray="7 7"/>
-    <path d="M608 150 C 780 150, 930 112, 946 192" stroke-dasharray="7 7"/>
+    <path d="M322 100 C 360 0, 946 0, 946 138" stroke-dasharray="7 7"/>
+    <path d="M608 150 C 800 150, 946 60, 946 138" stroke-dasharray="7 7"/>
   </g>
-  <path d="M938 182 l8 12 8 -12" fill="none" stroke="#0F5C51" stroke-width="3"
+  <!-- las dos llegan verticales y la punta se detiene sobre la carpeta (ronda del 2026-10-15) -->
+  <path d="M937 132 l9 10 9 -10" fill="none" stroke="#0F5C51" stroke-width="3"
         stroke-linecap="round" stroke-linejoin="round" opacity=".7"/>
 </svg>

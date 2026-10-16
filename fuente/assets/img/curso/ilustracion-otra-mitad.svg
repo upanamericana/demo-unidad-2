@@ -8,8 +8,8 @@
   <defs>
     <linearGradient id="ilu-otra-mitad-fondo" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%"   stop-color="#E4EEEB"/>
-      <stop offset="55%"  stop-color="#EFEBE2"/>
-      <stop offset="100%" stop-color="#F7F4EE"/>
+      <stop offset="55%"  stop-color="#ECF1EF"/>
+      <stop offset="100%" stop-color="#F6F8F7"/>
     </linearGradient>
     <filter id="ilu-otra-mitad-sombra" x="-30%" y="-30%" width="160%" height="160%">
       <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#0A4039" flood-opacity="0.16"/>

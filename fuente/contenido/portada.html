@@ -1,7 +1,8 @@
 <style>
   /* =========================================================
      PORTADA · Posgrados Panamericana (la Propuesta 5 de
-     docs/propuestas-portada-2026-10-07, elegida el 2026-10-10)
+     docs/propuestas-portada-2026-10-07, elegida el 2026-10-10, con el Tahalí de la 6 y el ritmo
+     vertical en vh desde la ronda del 2026-10-15)
      Master graphic B del manual (pp. 224 y 228), con el gesto de la portada de Andina: la
      fotografía ocupa la mitad derecha a toda altura y se funde hacia el texto; el Tahalí
      entra sobre la foto en verde con multiply (la variante «con foto» de Posgrados,
@@ -42,38 +43,41 @@
     content:''; position:absolute; inset:0;
     background:linear-gradient(180deg, transparent 62%, rgba(4,30,26,.55) 100%);
   }
-  /* un solo Tahalí: verde Posgrados en multiply sobre la foto (p. 232), cruzando la zona
-     del escritorio, nunca el rostro (p. 224) */
+  /* un solo Tahalí (C, ronda 2026-10-15: el de la Propuesta 6): verde sólido (p. 232, primera
+     columna de Posgrados), entrando por la esquina superior derecha y cortado por el formato,
+     como en el afiche de la p. 228; cruza el hombro, nunca el rostro (p. 224), y queda lejos
+     del texto: un título largo nunca le cae encima */
   .up-portada__tahali{
     position:absolute; z-index:2; top:0; bottom:0;
-    right:calc(min(62vw, 980px) * .50);
-    width:calc(min(62vw, 980px) * .40);
+    right:calc(min(62vw, 980px) * -.24);
+    width:calc(min(62vw, 980px) * .48);
     background:var(--up-tahali-verde) center / 100% 100% no-repeat;
-    mix-blend-mode:multiply; opacity:.92;
     pointer-events:none;
   }
 
   .up-portada__inner{
     position:relative; z-index:3;
     width:100%; max-width:1240px; margin:0 auto;
-    padding:clamp(32px, 6vw, 88px);
+    /* A (ronda 2026-10-15): el ritmo vertical escala con la altura de la ventana para que
+       la portada quepa en la primera pantalla sin scroll (botón a la vista a 1366×650 y 1280×600) */
+    padding:clamp(20px, 4.5vh, 88px) clamp(32px, 6vw, 88px);
   }
   .up-portada__texto{ max-width:560px; }
-  .up-portada__logo img{ height:116px; width:auto; display:block; margin-bottom:clamp(28px, 5vh, 56px); }
+  .up-portada__logo img{ height:116px; width:auto; display:block; margin-bottom:clamp(14px, 3.5vh, 56px); }
   .up-portada__eyebrow{
     display:inline-flex; align-items:center; gap:12px;
     font-family:var(--font-body); font-weight:600; font-size:.8rem;
     letter-spacing:.24em; text-transform:uppercase;
-    color:var(--c-dorado-claro); margin-bottom:22px;
+    color:var(--c-dorado-claro); margin-bottom:clamp(10px, 2.4vh, 22px);
   }
   .up-portada__eyebrow::before{
     content:''; width:16px; height:10px;
     background:var(--up-eyebrow) left center / contain no-repeat;
   }
   .up-portada__title{
-    margin:0 0 22px; color:#fff;
+    margin:0 0 clamp(10px, 2.4vh, 22px); color:#fff;
     font-family:var(--font-display); font-weight:600;
-    font-size:clamp(2.4rem, 5vw, 3.9rem); line-height:.92; letter-spacing:.01em;
+    font-size:min(clamp(2.4rem, 5vw, 3.9rem), 8.6vh); line-height:.92; letter-spacing:.01em;
     text-transform:uppercase;
     -webkit-hyphens:auto; hyphens:auto; hyphenate-limit-chars:8 4 4;
     text-shadow:0 2px 24px rgba(4,30,26,.5);
@@ -85,9 +89,9 @@
     font-size:.78em; line-height:1.02;
     color:var(--c-dorado-claro);
   }
-  .up-portada__title--largo{ font-size:clamp(2rem, 4.1vw, 3.2rem); }
+  .up-portada__title--largo{ font-size:min(clamp(2rem, 4.1vw, 3.2rem), 7.4vh); }
   .up-portada__sub{
-    margin:0 0 28px; padding-top:16px;
+    margin:0 0 clamp(12px, 3vh, 28px); padding-top:clamp(8px, 1.8vh, 16px);
     border-top:1px solid rgba(255,255,255,.28);
     max-width:440px;
     color:rgba(255,255,255,.86);
@@ -95,8 +99,8 @@
   }
   .up-portada__quote{
     color:#fff; font-family:var(--font-display); font-style:italic; font-weight:400;
-    font-size:clamp(1.12rem, 1.8vw, 1.36rem); line-height:1.48;
-    max-width:500px; margin:0 0 38px;
+    font-size:min(clamp(1.12rem, 1.8vw, 1.36rem), 2.7vh); line-height:1.48;
+    max-width:500px; margin:0 0 clamp(16px, 4vh, 38px);
     padding-left:20px; border-left:3px solid var(--c-dorado);
   }
   .up-portada__acciones{ display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
@@ -104,7 +108,7 @@
     display:inline-flex; align-items:center; gap:10px;
     background:#fff; color:var(--c-acento); text-decoration:none;
     font-family:var(--font-body); font-weight:600; font-size:1rem; letter-spacing:.02em;
-    padding:16px 30px; border-radius:var(--r-md);
+    padding:clamp(12px, 1.8vh, 16px) 30px; border-radius:var(--r-md);
     box-shadow:0 14px 34px rgba(4,30,26,.40);
     transition:transform .18s ease, box-shadow .18s ease, background .18s ease, color .18s ease;
   }
@@ -136,7 +140,7 @@
               mask-image: linear-gradient(180deg, #000 62%, transparent 100%);
     }
     .up-portada__foto::after{ display:none; }
-    .up-portada__tahali{ right:auto; left:-18%; width:40%; top:0; bottom:auto; height:min(72vw, 380px); }
+    .up-portada__tahali{ left:auto; right:-24%; width:48%; top:0; bottom:auto; height:min(72vw, 380px); }
     .up-portada__textura{ top:30%; left:-40%; width:140%; }
     .up-portada__inner{ padding-top:8px; }
     .up-portada__logo img{ height:84px; margin-bottom:24px; }
@@ -156,7 +160,7 @@
         <img src="assets/img/logos/up-logo-blanco.svg" alt="Posgrados Panamericana · En línea" />
       </div>
 
-      <div class="up-portada__eyebrow">Posgrados Panamericana · Unidad 2</div>
+      <div class="up-portada__eyebrow">Semana 2</div>
 
       <h1 class="up-portada__title up-portada__title--largo" lang="es">
         De la respuesta <span class="up-suave">a la</span> recomendación:

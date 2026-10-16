@@ -29,7 +29,7 @@ module.exports = {
   },
 
   course: {
-    code:             'UNIDAD 2',
+    code:             'SEMANA 2',
     name:             'De la respuesta a la recomendación: audita antes de confiar',
     subtitle:         'Toma de decisiones con datos + IA',
     duration:         '',
@@ -61,7 +61,7 @@ module.exports = {
      salvo los marcados como editoriales. */
   menu: [
     { id: 'portada',         titulo: 'Inicio',                                    tipo: 'especial', icon: 'mdi:home-outline' },
-    { id: 'temario',         titulo: 'Contenido de la unidad',                    tipo: 'especial', icon: 'mdi:map-outline' },
+    { id: 'temario',         titulo: 'Contenido',                                tipo: 'especial', icon: 'mdi:map-outline' },
 
     { id: 'introduccion',    titulo: 'Introducción',                              tipo: 'especial', icon: 'mdi:information-variant',
       secciones: [ { titulo: 'Qué vas a lograr en esta unidad', ancla: 'que-vas-a-lograr' },              // EDITORIAL · agrupa Objetivo + Público objetivo + ¿Qué vas a aprender?, como en U1
@@ -78,7 +78,7 @@ module.exports = {
     /* Conclusión y Glosario: ocultos por defecto (decisión del 2026-10-10, la de la Unidad 3 de
        Scala). Sus pantallas siguen en contenido/; para mostrarlas, quita el // de su línea. */
     // { id: 'conclusion',      titulo: 'Conclusión',                                tipo: 'especial', icon: 'mdi:flag-outline', secciones: [] },
-    { id: 'evaluacion',      titulo: 'Evaluación de la unidad',                   tipo: 'especial', icon: 'mdi:clipboard-check-outline', secciones: [] },
+    { id: 'evaluacion',      titulo: 'Evaluación',                              tipo: 'especial', icon: 'mdi:clipboard-check-outline', secciones: [] },
     // { id: 'glosario',        titulo: 'Glosario',                                  tipo: 'especial', icon: 'mdi:book-open-variant-outline', secciones: [] },
     { id: 'referencias',     titulo: 'Referencias',                               tipo: 'especial', icon: 'mdi:bookmark-outline', secciones: [] },
   ],

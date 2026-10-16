@@ -96,18 +96,18 @@
               <rect x="14" y="18" width="432" height="356" fill="#FFFFFF"/>
               <rect x="14" y="18" width="432" height="12" fill="#B9975B"/>
             </g>
-            <rect x="14" y="18" width="432" height="356" rx="20" fill="none" stroke="#E3DDD0" stroke-width="2"/>
+            <rect x="14" y="18" width="432" height="356" rx="20" fill="none" stroke="#DCE4E1" stroke-width="2"/>
 
             <text x="44" y="72" font-size="14" font-weight="600" letter-spacing="2" fill="#0F5C51">AUDITORÍA</text>
             <text x="44" y="97" font-size="15" fill="#5F6663">Tres preguntas, para volverse un hábito</text>
-            <line x1="44" y1="124" x2="416" y2="124" stroke="#E3DDD0" stroke-width="2"/>
+            <line x1="44" y1="124" x2="416" y2="124" stroke="#DCE4E1" stroke-width="2"/>
 
-            <circle cx="64" cy="168" r="18" fill="#EFEBE2"/>
+            <circle cx="64" cy="168" r="18" fill="#ECF1EF"/>
             <text x="64" y="174" text-anchor="middle" font-size="17" font-weight="600" fill="#0F5C51">?</text>
             <text x="98" y="163" font-size="16" font-weight="600" fill="#0A4039">¿Esto se puede verificar en algo</text>
             <text x="98" y="184" font-size="16" font-weight="600" fill="#0A4039">que no sea la propia IA?</text>
 
-            <circle cx="64" cy="248" r="18" fill="#EFEBE2"/>
+            <circle cx="64" cy="248" r="18" fill="#ECF1EF"/>
             <text x="64" y="254" text-anchor="middle" font-size="17" font-weight="600" fill="#5F6663">?</text>
             <text x="98" y="243" font-size="16" font-weight="600" fill="#0A4039">¿Qué pasaría si esta cifra</text>
             <text x="98" y="264" font-size="16" font-weight="600" fill="#0A4039">estuviera mal?</text>
@@ -150,12 +150,15 @@
       </section>
 
       <!-- Carrusel del DI · las tres fuentes, visibles a la vez: un carrusel escondería dos de tres -->
-      <div class="ova-infografia" data-reveal>
+      <!-- Tarjetas con foto (ronda del cliente del 2026-10-15, fila S2): la pieza sigue siendo ova-infografia;
+           fotos provisionales hasta el banco de UP (Vitaly Gariev, Unsplash License: 1FzEg5g7vt0, aoweP90-XwM,
+           Qzw2nMdXMMQ). -->
+      <div class="ova-infografia up-tarjetas-foto" data-reveal>
         <div class="ova-infografia__paso" style="--tinte:#3F7D74;">
           <div class="ova-infografia__num">01</div>
           <div class="ova-infografia__icono"><iconify-icon icon="mdi:database-outline"></iconify-icon></div>
           <div>
-            <h3 class="ova-infografia__label">Dato interno</h3>
+            <figure class="up-tf__media"><img src="assets/img/curso/foto-dato-interno.webp" alt="Dos colegas revisan un tablero de cifras en el portátil." loading="lazy" /><h3 class="ova-infografia__label">Dato interno</h3></figure>
             <p class="ova-infografia__desc">Un reporte, un sistema, una cifra propia de la organización.</p>
           </div>
         </div>
@@ -163,7 +166,7 @@
           <div class="ova-infografia__num">02</div>
           <div class="ova-infografia__icono"><iconify-icon icon="mdi:account-voice"></iconify-icon></div>
           <div>
-            <h3 class="ova-infografia__label">Experiencia directa</h3>
+            <figure class="up-tf__media"><img src="assets/img/curso/foto-experiencia-directa.webp" alt="Dos colegas conversan en su puesto de trabajo; una de ellas explica." loading="lazy" /><h3 class="ova-infografia__label">Experiencia directa</h3></figure>
             <p class="ova-infografia__desc">Alguien que conoce el tema desde la práctica y puede confirmar o refutar la afirmación.</p>
           </div>
         </div>
@@ -171,7 +174,7 @@
           <div class="ova-infografia__num">03</div>
           <div class="ova-infografia__icono"><iconify-icon icon="mdi:file-certificate-outline"></iconify-icon></div>
           <div>
-            <h3 class="ova-infografia__label">Fuente externa verificable</h3>
+            <figure class="up-tf__media"><img src="assets/img/curso/foto-fuente-externa.webp" alt="Tres profesionales revisan un documento en una reunión." loading="lazy" /><h3 class="ova-infografia__label">Fuente externa verificable</h3></figure>
             <p class="ova-infografia__desc">Un documento oficial, un proveedor, una norma.</p>
           </div>
         </div>
@@ -204,7 +207,7 @@
       </p>
 
       <!-- Idea clave -->
-      <div class="ova-callout" style="margin-top:32px;" data-reveal>
+      <div class="ova-callout up-clave" style="margin-top:32px;" data-reveal>
         <div class="ova-callout__ico"><iconify-icon icon="mdi:lightbulb-on-outline"></iconify-icon></div>
         <div>
           <span class="ova-callout__tag">Idea clave</span>
@@ -296,11 +299,8 @@
       </div>
 
       <figure class="up-foto-ancha" data-reveal>
-        <div class="up-pendiente" role="img" aria-label="Fotografía pendiente: Una profesional revisa un reporte impreso frente a su portátil, con luz natural (pauta del manual, pp. 22-23).">
-          <div class="up-pendiente__marco"><iconify-icon icon="mdi:image-outline"></iconify-icon></div>
-          <span class="up-pendiente__tag">Fotografía pendiente · banco de imágenes de Posgrados Panamericana</span>
-          <p class="up-pendiente__desc">Una profesional revisa un reporte impreso frente a su portátil, con luz natural (pauta del manual, pp. 22-23).</p>
-        </div>
+        <!-- Foto del cliente (docs/Catálogo de infografías-interactivos, «Se pueden usar las siguientes imágenes»), WebP 1600 px; ronda del 2026-10-15, filas S y X. Tarjeta con foto: el pie va sobre la imagen. -->
+        <img src="assets/img/curso/foto-analisis-sobre-papel.webp" alt="Dos personas revisan reportes impresos con gráficos sobre la mesa; una señala una cifra con el bolígrafo." loading="lazy" />
         <figcaption>
           La afirmación queda verificada contra una fuente ajena a la herramienta; lo que
           no se logra verificar se declara como hipótesis.

@@ -225,3 +225,72 @@
   };
   document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', iniciar) : iniciar();
 })();
+
+/* Capa Posgrados Panamericana · contador de cifras (ronda del cliente del 2026-10-15, V2)
+   ------------------------------------------------------------------
+   La cifra de un «Dato en cifras» (.up-cifra__valor) sube de 0 a su valor la primera vez
+   que entra en pantalla, como los «Datos curiosos con contador» del catálogo del cliente.
+   Solo cuenta lo que es un número entero o decimal en formato español («760», «10.519»,
+   «51,7 %»); un rango («5 a 7») queda quieto. Al terminar, el texto vuelve a ser el
+   original carácter por carácter. Con «reducir movimiento» no se anima. */
+(() => {
+  'use strict';
+  if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const NUM = /^(\d{1,3}(?:\.\d{3})*|\d+)(,\d+)?(\s?%)?$/;
+  const vistos = new WeakSet();
+
+  function textoDe(el) {
+    const w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, { acceptNode: n => n.textContent.trim() ? 1 : 3 });
+    return w.nextNode();
+  }
+
+  function contar(nodo) {
+    const original = nodo.textContent;
+    const m = original.trim().match(NUM);
+    if (!m) return;
+    const enteros = m[1].replace(/\./g, '');
+    const decimales = m[2] ? m[2].length - 1 : 0;
+    const fin = parseFloat(enteros + (m[2] ? '.' + m[2].slice(1) : ''));
+    const miles = m[1].includes('.');
+    const sufijo = m[3] || '';
+    const fmt = v => {
+      let [e, d] = v.toFixed(decimales).split('.');
+      if (miles) e = e.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+      return e + (d ? ',' + d : '') + sufijo;
+    };
+    const dur = 1400, t0 = performance.now();
+    const paso = t => {
+      const p = Math.min(1, (t - t0) / dur);
+      const v = fin * (1 - Math.pow(1 - p, 3));
+      nodo.textContent = p < 1 ? fmt(v) : original;
+      if (p < 1) requestAnimationFrame(paso);
+    };
+    nodo.textContent = fmt(0);
+    requestAnimationFrame(paso);
+  }
+
+  const io = 'IntersectionObserver' in window ? new IntersectionObserver(entradas => {
+    entradas.forEach(e => {
+      if (!e.isIntersecting) return;
+      io.unobserve(e.target);
+      const n = textoDe(e.target);
+      if (n) contar(n);
+    });
+  }, { threshold: 0.6 }) : null;
+
+  function vigilar(raiz) {
+    if (!io) return;
+    raiz.querySelectorAll('.up-cifra__valor').forEach(el => {
+      if (vistos.has(el)) return;
+      vistos.add(el);
+      io.observe(el);
+    });
+  }
+
+  function iniciar() {
+    vigilar(document);
+    // La SPA pinta cada pantalla al navegar: se vigilan las cifras nuevas.
+    new MutationObserver(() => vigilar(document)).observe(document.body, { childList: true, subtree: true });
+  }
+  document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', iniciar) : iniciar();
+})();

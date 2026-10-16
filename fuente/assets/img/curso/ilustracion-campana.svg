@@ -10,7 +10,7 @@
     </linearGradient>
   </defs>
 
-  <rect width="1200" height="420" rx="18" fill="#F7F4EE"/>
+  <rect width="1200" height="420" rx="18" fill="#F6F8F7"/>
 
   <!-- Franja del feriado -->
   <rect x="437" y="52" width="316" height="288" rx="12" fill="#B9975B" opacity=".14"/>

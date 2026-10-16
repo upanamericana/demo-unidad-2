@@ -7,8 +7,8 @@
   <defs>
     <linearGradient id="ilu-automatizacion-fondo" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%"   stop-color="#E4EEEB"/>
-      <stop offset="55%"  stop-color="#EFEBE2"/>
-      <stop offset="100%" stop-color="#F7F4EE"/>
+      <stop offset="55%"  stop-color="#ECF1EF"/>
+      <stop offset="100%" stop-color="#F6F8F7"/>
     </linearGradient>
     <filter id="ilu-automatizacion-sombra" x="-30%" y="-30%" width="160%" height="160%">
       <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#0A4039" flood-opacity="0.16"/>
@@ -39,9 +39,9 @@
   <use href="#ilu-automatizacion-recomendacion" x="262" y="120"/>
   <!-- La guardia que sí se conserva: preguntas antes de aceptar -->
   <g font-family="Manrope, system-ui, sans-serif" font-size="24" font-weight="700" fill="#0F5C51" text-anchor="middle">
-    <circle cx="518" cy="150" r="21" fill="#EFEBE2"/><text x="518" y="159">?</text>
-    <circle cx="546" cy="200" r="21" fill="#EFEBE2"/><text x="546" y="209">?</text>
-    <circle cx="518" cy="250" r="21" fill="#EFEBE2"/><text x="518" y="259">?</text>
+    <circle cx="518" cy="150" r="21" fill="#ECF1EF"/><text x="518" y="159">?</text>
+    <circle cx="546" cy="200" r="21" fill="#ECF1EF"/><text x="546" y="209">?</text>
+    <circle cx="518" cy="250" r="21" fill="#ECF1EF"/><text x="518" y="259">?</text>
   </g>
 
   <!-- ══ Escena 2 · viene de un sistema ══ -->

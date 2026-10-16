@@ -32,22 +32,20 @@ html:root {
   --c-dorado-tinta:  #7A5C2B;   /* dorado como texto sobre claro: 6,19:1 sobre blanco */
   --c-dorado-claro:  #D9C9A3;   /* dorado como texto sobre verde: 4,81:1 */
   --c-dorado-palido: #F1EAD9;   /* superficie dorada muy clara para fichas y datos */
-  --c-crema:         #F7F4EE;   /* la hoja: fondo de trabajo cálido (territorio visual, pp. 22-26) */
-  --c-lino:          #EFEBE2;   /* superficie apagada */
+  --c-crema:         #F7F4EE;   /* crema de marca (tono sobre tono en la portada); ya no es el fondo de trabajo */
+  --c-lino:          #ECF1EF;   /* superficie apagada, en la familia fría del fondo (ronda 2026-10-15; antes #EFEBE2) */
 
   --grad-up: linear-gradient(118deg, #072E29 0%, #0A4039 46%, #0F5C51 100%);
 
   /* --- Tipografía ---
      Laurentian Std (primaria, cabezas y destacados; manual p. 30) y Seravek
-     (secundaria, cuerpo; p. 31). Las dos son comerciales con licencia de
-     escritorio: se declaran primero en el stack para quien las tenga instaladas
-     (Seravek viene con macOS e iOS) y detrás va el sustituto libre que viaja por
-     Google Fonts (fuentes.html): Crimson Pro y Source Sans 3, elegidos por
-     espécimen (docs/analisis-manual-2026-10-07). Licencia web: pendiente del
-     cliente (INSTITUCION.md §6). */
-  --font-display: 'Laurentian Std', 'Crimson Pro', Georgia, 'Times New Roman', serif;
+     (secundaria, cuerpo; p. 31). Desde el 2026-10-15 viajan dentro del curso
+     (fuente/assets/fonts/, @font-face en skin.css): la universidad compró las
+     fuentes (decisión del arquitecto). Detrás, solo las de sistema por si un
+     archivo no carga. */
+  --font-display: 'Laurentian Std', Georgia, 'Times New Roman', serif;
   --font-serif:   var(--font-display);
-  --font-body:    'Seravek', 'Source Sans 3', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-body:    'Seravek', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-mono:    var(--font-body);   /* los eyebrows son Seravek en mayúsculas con tracking */
 
   /* --- Estados ---
@@ -64,15 +62,19 @@ html:root {
   --r-sm: 2px;  --r-md: 4px;  --r-lg: 6px;  --r-xl: 8px;  --r-pill: 4px;
 }
 
-/* --- Superficies cálidas ---
+/* --- Superficies ---
+   Ronda del cliente del 2026-10-15: el fondo de las páginas es el del aula de UP,
+   #F6F8F7 (gris verdoso neutro; sus «Fondo banners» de docs/Elementos están hechos
+   sobre ese mismo color), y la superficie apagada y el borde pasan a su familia
+   fría. Antes: crema #F7F4EE, lino #EFEBE2, borde #E3DDD0.
    Solo en las versiones claras (híbrida y clara): la oscura conserva las
    superficies del motor. Con `html:root` a secas se pisarían las tres. */
 html:root:not([data-version="oscura"]) {
-  --bg-app:     #F7F4EE;
+  --bg-app:     #F6F8F7;
   --bg-surface: #FFFFFF;
   --bg-card:    #FFFFFF;
-  --bg-muted:   #EFEBE2;
-  --border-c:   #E3DDD0;
+  --bg-muted:   #ECF1EF;
+  --border-c:   #DCE4E1;
   --text-head:  #10302B;
   --text-pri:   #2A2F2D;
   --text-mut:   #5F6663;
